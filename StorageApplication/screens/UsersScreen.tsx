@@ -3,7 +3,7 @@ import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 import { profilePageStyles } from '../styles/profileStyles';
 
-export default function ProfileScreen({ navigation }: RootTabScreenProps<'ProfileScreen'>) {
+export default function UsersScreen({ navigation }: RootTabScreenProps<'UsersScreen'>) {
   return(
     <View style={profilePageStyles.container}>
       <Text>LÁTSZIK????</Text>

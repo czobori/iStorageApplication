@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
+const { default: UsersScreen } = require('../screens/UsersScreen');
 
 const connection = mysql.createPool({
     host: 'localhost',

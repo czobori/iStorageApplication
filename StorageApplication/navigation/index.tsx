@@ -10,7 +10,7 @@ import useColorScheme from '../hooks/useColorScheme';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import LoginScreen from '../screens/LoginScreen';
-import ProfileScreen from '../screens/ProfileScreen';
+import UsersScreen from '../screens/UsersScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 
@@ -80,15 +80,15 @@ function BottomTabNavigator() {
         })}
       />
       <BottomTab.Screen
-        name="ProfileScreen"
-        component={ProfileScreen}
-        options={({ navigation }: RootTabScreenProps<'ProfileScreen'>) => ({
-          title: 'Profil',
+        name="UsersScreen"
+        component={UsersScreen}
+        options={({ navigation }: RootTabScreenProps<'UsersScreen'>) => ({
+          title: 'Felhasználók',
           tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
         })}
       />
     </BottomTab.Navigator>
-
+    
   );
 }
 
