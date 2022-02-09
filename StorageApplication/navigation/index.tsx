@@ -83,7 +83,7 @@ function BottomTabNavigator() {
         name="UsersScreen"
         component={UsersScreen}
         options={({ navigation }: RootTabScreenProps<'UsersScreen'>) => ({
-          title: 'Felhasználók',
+          title: 'Felhasználók adatai',
           tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
         })}
       />

@@ -1,4 +1,4 @@
-const express = require('express');
+/*const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
 
@@ -25,7 +25,7 @@ app.listen(3000,()=>{
     console.log('Go to http://localhost:3000/user so you can see the data.');
 }); 
 
-
+*/
 
 // https://stackoverflow.com/questions/67257267/react-native-mysql-fetching-data-in-my-app
 // https://www.tutsmake.com/how-to-send-data-from-react-to-node-js-express-mysql/
