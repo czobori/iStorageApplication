@@ -1,12 +1,11 @@
 import { StyleSheet,TextInput,TouchableOpacity,Button } from 'react-native';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
-import { loginPageStyles } from '../styles/loginStyles';
+import { loginPageStyles } from '../styles/screenStyles/loginStyles';
 import React from 'react';
 
 //https://stackoverflow.com/questions/66224134/login-form-expo
 export default function LoginScreen({ navigation }: RootTabScreenProps<'LoginScreen'>) {
-  
   return (
     <View style={loginPageStyles.container}>
       <Text style={loginPageStyles.istorage}>IStorage</Text>
