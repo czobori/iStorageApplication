@@ -1,12 +1,6 @@
 import { StyleSheet} from 'react-native';
 
 const userPageStyles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#7B7D7D',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
     text: {
       fontSize:15,
       marginTop:10,

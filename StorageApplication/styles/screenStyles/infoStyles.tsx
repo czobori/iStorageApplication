@@ -1,11 +1,6 @@
 import { StyleSheet} from 'react-native';
 
 const infoPageStyles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
     title: {
         fontSize: 20,
         fontWeight: 'bold',

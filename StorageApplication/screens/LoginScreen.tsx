@@ -1,13 +1,14 @@
 import {TextInput,TouchableOpacity } from 'react-native';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
+import { containerStyles } from '../styles/element/containerStyle';
 import { loginPageStyles } from '../styles/screenStyles/loginStyles';
 import React from 'react';
 
 //https://stackoverflow.com/questions/66224134/login-form-expo
 export default function LoginScreen({ navigation }: RootTabScreenProps<'LoginScreen'>) {
   return (
-    <View style={loginPageStyles.container}>
+    <View style={containerStyles.container}>
       <Text style={loginPageStyles.istorage}>IStorage</Text>
       <Text style={loginPageStyles.text}>A folytatáshoz kérem jelentkezzen be!</Text>
       <TextInput style={loginPageStyles.input} 
