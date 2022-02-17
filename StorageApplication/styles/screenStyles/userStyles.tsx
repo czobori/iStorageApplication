@@ -1,6 +1,6 @@
 import { StyleSheet} from 'react-native';
 
-const profilePageStyles = StyleSheet.create({
+const userPageStyles = StyleSheet.create({
     container: {
       flex: 1,
       backgroundColor: '#7B7D7D',
@@ -10,7 +10,7 @@ const profilePageStyles = StyleSheet.create({
     text: {
       fontSize:15,
       marginTop:10,
-      marginBottom:10,
+      marginBottom:20,
     },
   });
-export {profilePageStyles};
+export {userPageStyles};

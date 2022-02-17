@@ -1,20 +1,15 @@
-import { StyleSheet,TextInput,TouchableOpacity,Button } from 'react-native';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
-import { profilePageStyles } from '../styles/screenStyles/profileStyles';
-import { State } from 'react-native-gesture-handler';
-import {} from '..//server/User';
-
+import { userPageStyles } from '../styles/screenStyles/userStyles';
+import User from "../element/User";
 
 export default function UsersScreen({ navigation }: RootTabScreenProps<'UsersScreen'>) {
- //https://www.youtube.com/watch?v=MY_DEKLQiOU&t=59s
-  /*state ={
-    data:[]
-  }*/
+  //AppRegistry.registerComponent("", () => User);
   return(
-    <View style={profilePageStyles.container}>
-      <Text>Felhasználók adatai</Text>
-      
+    <View style={userPageStyles.container}>
+      <Text style={userPageStyles.text}>Felhasználók adatai</Text>
+      <User/>
     </View>
-  );
+    
+  )
 }

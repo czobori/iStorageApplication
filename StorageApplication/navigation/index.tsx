@@ -11,8 +11,11 @@ import InfoScreen from '../screens/InfoScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import LoginScreen from '../screens/LoginScreen';
 import UsersScreen from '../screens/UsersScreen';
+import HomeScreen from '../screens/HomeScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
+
+import { AntDesign,FontAwesome5,MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -62,7 +65,7 @@ function BottomTabNavigator() {
         component={LoginScreen}
         options={({ navigation }: RootTabScreenProps<'LoginScreen'>) => ({
           title: 'Bejelentkezés',
-          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="login-variant" size={24} color="black" />,
           headerRight: () => (
             <Pressable
               onPress={() => navigation.navigate('Info')}
@@ -80,11 +83,19 @@ function BottomTabNavigator() {
         })}
       />
       <BottomTab.Screen
+        name="HomeScreen"
+        component={HomeScreen}
+        options={({ navigation }: RootTabScreenProps<'HomeScreen'>) => ({
+          title: 'Kezdőlap',
+          tabBarIcon: ({ color }) => <FontAwesome5 name="home" size={24} color="black" />,
+        })}
+      />
+      <BottomTab.Screen
         name="UsersScreen"
         component={UsersScreen}
         options={({ navigation }: RootTabScreenProps<'UsersScreen'>) => ({
-          title: 'Felhasználók adatai',
-          tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
+          title: 'Felhasználók',
+          tabBarIcon: ({ color }) => <FontAwesome5 name="users" size={24} color="black" />,
         })}
       />
     </BottomTab.Navigator>

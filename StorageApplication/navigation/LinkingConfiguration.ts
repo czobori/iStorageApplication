@@ -20,6 +20,11 @@ const linking: LinkingOptions<RootStackParamList> = {
               LoginScreen: 'login',
             }
           },
+          HomeScreen:{
+            screens:{
+              HomeScreen: 'home',
+            }
+          },
           UsersScreen:{
             screens:{
               UsersScreen: 'users',

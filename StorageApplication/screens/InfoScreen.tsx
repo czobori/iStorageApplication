@@ -1,10 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
-import { Platform, StyleSheet } from 'react-native';
+import { Platform} from 'react-native';
 import ScreenInfo from '../components/ScreenInfo';
 import { Text, View } from '../components/Themed';
 import { infoPageStyles } from '../styles/screenStyles/infoStyles';
 
-export default function ModalScreen() {
+export default function InfoScreen() {
   return (
     <View style={infoPageStyles.container}>
       <Text style={infoPageStyles.title}>Információ</Text>

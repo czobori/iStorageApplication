@@ -1,4 +1,4 @@
-import { StyleSheet,TextInput,TouchableOpacity,Button } from 'react-native';
+import {TextInput,TouchableOpacity } from 'react-native';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 import { loginPageStyles } from '../styles/screenStyles/loginStyles';
