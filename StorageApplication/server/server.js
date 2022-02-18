@@ -41,3 +41,18 @@ app.get('/user',function(req,res){
         }
     });
 });
+
+app.get('/accordingToTheBrand',function(req,res){
+    con.query('SELECT b.brand_name, COUNT(s.amount) As berendeltDb FROM stock As s INNER JOIN phone As p On s.phoneID = p.id INNER JOIN brand AS b On p.brandID = b.id Where 1 GROUP by b.brand_name;',function(error,rows,fields){
+        if(error) console.log(error);
+        else{
+            console.log(rows);
+            res.send(rows);
+            fs.writeFile('accordingToTheBrand.json', JSON.stringify(results), function (err) {
+                if (err) throw err;
+                console.log('Saved!');
+            });
+        }
+    });
+});
+
