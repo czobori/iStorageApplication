@@ -29,7 +29,7 @@ con.connect(function(error){
 
 var fs = require('fs');
 app.get('/user',function(req,res){
-    con.query('SELECT * FROM user',function(error,rows,fields){
+    con.query('SELECT * FROM USER order by full_name',function(error,rows,fields){
         if(error) console.log(error);
         else{
             console.log(rows);

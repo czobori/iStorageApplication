@@ -19,20 +19,21 @@ export default class User extends Component {
   render() {
     return (
       <View>
-       <FlatList
-       data={this.state.data}
-       keyExtractor={(item,index) => index.toString()}
-       renderItem={({item}) =>
 
-        <View style={userComponentStyles.div}>
-          <Text>{item.full_name}</Text>
-          <Text>  felhasználónév: {item.username}</Text>
-          <Text>  email: {item.email}</Text>
-          <Text>  telefon: {item.phone_number}</Text>
-        </View>
+        <FlatList
+          data={this.state.data}
+          keyExtractor={(item,index) => index.toString()}
+          renderItem={({item}) =>
 
-       }
-       />
+            <View style={userComponentStyles.div}>
+              <Text>{item.full_name}</Text>
+              <Text>  felhasználónév: {item.username}</Text>
+              <Text>  email: {item.email}</Text>
+              <Text>  telefon: {item.phone_number}</Text>
+            </View>
+
+          }  
+        />
       </View>
     );
   }
