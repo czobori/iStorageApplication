@@ -27,17 +27,13 @@ con.connect(function(error){
     else console.log("connected");
 });
 
-var fs = require('fs');
+var users = [];
 app.get('/user',function(req,res){
     con.query('SELECT * FROM USER order by full_name',function(error,rows,fields){
         if(error) console.log(error);
         else{
             console.log(rows);
             res.send(rows);
-            fs.writeFile('users.json', JSON.stringify(results), function (err) {
-                if (err) throw err;
-                console.log('Saved!');
-            });
         }
     });
 });
@@ -48,11 +44,28 @@ app.get('/accordingToTheBrand',function(req,res){
         else{
             console.log(rows);
             res.send(rows);
-            fs.writeFile('accordingToTheBrand.json', JSON.stringify(results), function (err) {
-                if (err) throw err;
-                console.log('Saved!');
-            });
         }
     });
 });
+
+// allPlaces = currentlyInStock + soMuchSpace (mert mindig levonja h hány hely van)
+app.get('/currentlyInStock',function(req,res){
+    con.query('SELECT Sum(stock.amount)as `beerkezett` FROM `stock` Inner JOIN status on status.id = stock.statusID WHERE status.status = "Beérkezett"',function(error,rows,fields){
+        if(error) console.log(error);
+        else{
+            console.log(rows);
+            res.send(rows[0].beerkezett);
+        }
+    });
+});
+app.get('/soMuchSpace',function(req,res){
+    con.query('SELECT `capacity`FROM `warehouse` where `id` = 1',function(error,rows,fields){
+        if(error) console.log(error);
+        else{
+            console.log(rows);
+            res.send(rows[0].capacity);
+        }
+    });
+});
+
 

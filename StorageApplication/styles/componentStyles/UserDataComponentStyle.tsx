@@ -1,11 +1,19 @@
 import { StyleSheet} from 'react-native';
 
 const userComponentStyles = StyleSheet.create({
-    div:{
-        backgroundColor: '#ffffff',
-        padding:10,
-        margin:10,
-        borderRadius:5
-    }
+  div:{
+    backgroundColor: '#003247',
+    padding:10,
+    margin:10,
+    borderRadius:5,
+  },
+  text:{
+    color:'#fff',
+    paddingLeft:10
+  },
+  nevek:{
+    color:'#fff',
+    fontWeight: "bold"
+  }
   });
 export {userComponentStyles};

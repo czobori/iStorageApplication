@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {Text, View} from 'react-native';
-import {LineChart,BarChart,PieChart,ProgressChart,ContributionGraph,StackedBarChart} from "react-native-chart-kit";
-import PieChart from 'react-native-pie-chart';
+import * as Progress from 'react-native-progress';
+import WarehouseSaturation from './WarehouseFull';
 export default class AccordingToTheBrand extends Component {
 
- state ={
+  state ={
     data:[]
   }
 
@@ -31,13 +31,19 @@ export default class AccordingToTheBrand extends Component {
     console.log(brandNames());
     console.log(berendeltDbs());
 
-
+    const data = {
+      labels: brandNames,
+      data: berendeltDbs
+    };
+    console.log(data);
+    
     return (
         <View>
-            <Text>Berendelt márkáink</Text>
-            //https://bestofreactjs.com/repo/indiespirit-react-native-chart-kit-react-charts
+            <Text>Raktár teltsége</Text>
+            <Progress.Bar progress={0.3}/>
         </View>
        
     )
   }
 }
+

@@ -9,7 +9,7 @@ export default function UsersScreen({ navigation }: RootTabScreenProps<'UsersScr
   //AppRegistry.registerComponent("", () => User);
   return(
     <View style={containerStyles.container}>
-      <Text style={userPageStyles.text}>Felhasználók</Text>
+      <Text style={userPageStyles.text}>Raktárosok</Text>
       <ScrollView showsHorizontalScrollIndicator={false}>
         <User/>
       </ScrollView>

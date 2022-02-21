@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {Text, View,FlatList} from 'react-native';
 import { userComponentStyles } from '../styles/componentStyles/UserDataComponentStyle';
+import { AntDesign,FontAwesome5,MaterialCommunityIcons,Fontisto,Feather, Entypo } from '@expo/vector-icons';
 export default class User extends Component {
-
   state ={
     data:[]
   }
@@ -26,12 +26,11 @@ export default class User extends Component {
           renderItem={({item}) =>
 
             <View style={userComponentStyles.div}>
-              <Text>{item.full_name}</Text>
-              <Text>  felhasználónév: {item.username}</Text>
-              <Text>  email: {item.email}</Text>
-              <Text>  telefon: {item.phone_number}</Text>
+              <Text style={userComponentStyles.nevek}>{item.full_name}</Text>
+              <Text style={userComponentStyles.text}><AntDesign name="user" size={15} color="#fff" /> {item.username}</Text>
+              <Text style={userComponentStyles.text}><Entypo name="mail" size={15} color="#fff" /> {item.email}</Text>
+              <Text style={userComponentStyles.text}><Entypo name="old-phone" size={15} color="#fff" /> {item.phone_number}</Text>
             </View>
-
           }  
         />
       </View>

@@ -14,7 +14,6 @@ import UsersScreen from '../screens/UsersScreen';
 import HomeScreen from '../screens/HomeScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
-
 import { AntDesign,FontAwesome5,MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
@@ -45,10 +44,6 @@ function RootNavigator() {
   );
 }
 
-/**
- * A bottom tab navigator displays tab buttons on the bottom of the display to switch screens.
- * https://reactnavigation.org/docs/bottom-tab-navigator
- */
 const BottomTab = createBottomTabNavigator<RootTabParamList>();
 
 function BottomTabNavigator() {
@@ -65,7 +60,7 @@ function BottomTabNavigator() {
         component={LoginScreen}
         options={({ navigation }: RootTabScreenProps<'LoginScreen'>) => ({
           title: 'Bejelentkezés',
-          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="login-variant" size={24} color="black" />,
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="login-variant" size={24} color="#1e2833" />,
           headerRight: () => (
             <Pressable
               onPress={() => navigation.navigate('Info')}
@@ -75,7 +70,7 @@ function BottomTabNavigator() {
               <FontAwesome
                 name="info-circle"
                 size={25}
-                color={Colors[colorScheme].text}
+                color="#1e2833"
                 style={{ marginRight: 15 }}
               />
             </Pressable>
@@ -87,15 +82,15 @@ function BottomTabNavigator() {
         component={HomeScreen}
         options={({ navigation }: RootTabScreenProps<'HomeScreen'>) => ({
           title: 'Kezdőlap',
-          tabBarIcon: ({ color }) => <FontAwesome5 name="home" size={24} color="black" />,
+          tabBarIcon: ({ color }) => <FontAwesome5 name="home" size={24} color="#1e2833" />,
         })}
       />
       <BottomTab.Screen
         name="UsersScreen"
         component={UsersScreen}
         options={({ navigation }: RootTabScreenProps<'UsersScreen'>) => ({
-          title: 'Felhasználók',
-          tabBarIcon: ({ color }) => <FontAwesome5 name="users" size={24} color="black" />,
+          title: 'Raktárosok',
+          tabBarIcon: ({ color }) => <FontAwesome5 name="users" size={24} color="#1e2833" />,
         })}
       />
     </BottomTab.Navigator>

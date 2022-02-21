@@ -10,5 +10,8 @@ const infoPageStyles = StyleSheet.create({
         height: 1,
         width: '80%',
       }, 
+    darkblue:{
+        backgroundColor: "#1e2833",
+    }
     });
 export {infoPageStyles};
