@@ -24,7 +24,8 @@ export default class WarehouseSaturation extends Component{
             <View>
                 <Text>Raktár teltsége</Text>
                 <Text>{this.state.szam}</Text>
-                <Progress.Bar progress={this.state.szam} width={240}/>
+                {/*<Progress.Bar progress={this.state.szam} width={240}/>*/}
+                <Progress.Bar progress={0.3} maxwidth={240}/>
             </View>
         )
     }
