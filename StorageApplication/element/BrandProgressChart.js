@@ -36,7 +36,7 @@ export default class ChartBrand extends Component {
     
     return (
       <View>
-        <Text>Raktár teltsége</Text>
+        <Text>Márkák</Text>
         <ProgressChart
           data={[0.4, 0.6, 0.8]}
           width={Dimensions.get('window').width - 16}
