@@ -14,7 +14,6 @@ export default class ChartBrand extends Component {
     const response = await fetch('http://localhost:4550/accordingToTheBrand');
     const diagramdata = await response.json();
     this.setState({data: diagramdata});
-    
   }
   componentDidMount(){
     this.fetchData();
@@ -30,14 +29,10 @@ export default class ChartBrand extends Component {
       return arr.map(x => x.berendeltDb);
     }
     
-    console.log(brandNames());
-    console.log(berendeltDbs());
-
     const data = {
       labels: brandNames,
       data: berendeltDbs
     };
-    console.log(data);
     
     return (
       <View>

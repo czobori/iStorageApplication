@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
 
@@ -29,7 +28,7 @@ con.connect(function(error){
 
 var users = [];
 app.get('/user',function(req,res){
-    con.query('SELECT * FROM USER order by full_name',function(error,rows,fields){
+    con.query(userQ,function(error,rows,fields){
         if(error) console.log(error);
         else{
             console.log(rows);
@@ -54,18 +53,10 @@ app.get('/currentlyInStock',function(req,res){
         if(error) console.log(error);
         else{
             console.log(rows);
-            res.send(rows[0].beerkezett);
+            res.send({number:rows[0].beerkezett});
         }
     });
 });
-app.get('/soMuchSpace',function(req,res){
-    con.query('SELECT `capacity`FROM `warehouse` where `id` = 1',function(error,rows,fields){
-        if(error) console.log(error);
-        else{
-            console.log(rows);
-            res.send(rows[0].capacity);
-        }
-    });
-});
+
 
 
