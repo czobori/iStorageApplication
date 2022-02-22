@@ -27,6 +27,7 @@ const loginPageStyles = StyleSheet.create({
       borderColor:'#FDFEFE',
       borderRadius:5,
       backgroundColor: '#003247',
+      color:'#fff'
     },
     istorage:{
       fontSize:30,

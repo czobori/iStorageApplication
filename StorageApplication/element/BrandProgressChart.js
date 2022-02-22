@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Text, View} from 'react-native';
 import * as Progress from 'react-native-progress';
 import WarehouseSaturation from './WarehouseFull';
-import {SafeAreaView,Text,View,StyleSheet,Dimensions, ScrollView,} from 'react-native';
+import {SafeAreaView,StyleSheet,Dimensions, ScrollView,} from 'react-native';
 import {LineChart,BarChart,PieChart,ProgressChart,ContributionGraph,StackedBarChart,} from 'react-native-chart-kit';
 export default class ChartBrand extends Component {
 
