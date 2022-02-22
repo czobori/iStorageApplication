@@ -17,7 +17,7 @@ export default class WarehouseSaturation extends Component{
     render(){
         return(
             <View>
-                <Text>Raktár teltsége: {this.state.szam*100}%</Text>
+                <Text style={progressBarStyles.text}>Raktár teltsége: {this.state.szam*100}%</Text>
                 <Progress.Bar progress={this.state.szam} width={240} style={progressBarStyles.bar} />
             </View>
         )

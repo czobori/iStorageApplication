@@ -12,8 +12,8 @@ import {LineChart,BarChart,PieChart,ProgressChart,ContributionGraph,StackedBarCh
 export default function HomeScreen({ navigation }: RootTabScreenProps<'HomeScreen'>) {
   return(
     <View style={containerStyles.container}>
-    <WarehouseSaturation/>
-    <ChartBrand/>
+      <WarehouseSaturation/>
+      <ChartBrand/>
     </View>
   )
 }

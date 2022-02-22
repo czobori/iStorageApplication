@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
-import * as Progress from 'react-native-progress';
-import WarehouseSaturation from './WarehouseFull';
-import {SafeAreaView,StyleSheet,Dimensions, ScrollView,} from 'react-native';
-import {LineChart,BarChart,PieChart,ProgressChart,ContributionGraph,StackedBarChart,} from 'react-native-chart-kit';
+import {Text, View,Dimensions} from 'react-native';
+import {ProgressChart} from 'react-native-chart-kit'
+import { progressCartConfig } from '../const/ChartKitConfig';
+import { homePageStyles } from '../styles/screenStyles/homeStyle';
 export default class ChartBrand extends Component {
 
   state ={
@@ -34,30 +33,23 @@ export default class ChartBrand extends Component {
     
     const data = {
       labels: brandNames(),
-      data: berendeltDbs()
+      data: berendeltDbs(),
     };
 
     return (
       <View>
-        <Text>Márkák</Text>
+        <Text style={homePageStyles.cim}>Márkák a raktárban</Text>
+        <Text style={homePageStyles.informacio}>(bentről kifelé haladva)</Text>
         <ProgressChart
           data={data}
           width={Dimensions.get('window').width - 16}
           height={220}
-          chartConfig={{
-            backgroundColor: '#1cc910',
-            backgroundGradientFrom: '#eff3ff',
-            backgroundGradientTo: '#bdedfe',
-            decimalPlaces: 2,
-            color: (opacity = 1) => `rgba(30, 40, 51, ${opacity})`,
-            style: {
-              borderRadius: 16,
-            },
-          }}
+          chartConfig={progressCartConfig}
           style={{
             marginVertical: 8,
             borderRadius: 16,
           }}
+          strokeWidth= {15}
         />
       </View>
        
