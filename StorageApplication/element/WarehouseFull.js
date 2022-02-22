@@ -10,13 +10,11 @@ export default class WarehouseSaturation extends Component{
     fetchData= async()=>{
         const currently = await (await fetch ('http://localhost:4550/currentlyInStock')).json();
         this.setState({szam:currently.number/5000});
-        console.log(currently.number);
     }
     componentDidMount(){
         this.fetchData();
     }
     render(){
-        console.log(this.state.szam);
         return(
             <View>
                 <Text>Raktár teltsége: {this.state.szam*100}%</Text>

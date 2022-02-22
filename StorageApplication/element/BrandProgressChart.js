@@ -7,13 +7,16 @@ import {LineChart,BarChart,PieChart,ProgressChart,ContributionGraph,StackedBarCh
 export default class ChartBrand extends Component {
 
   state ={
-    data:[]
+    data:[],
+    osszes:0
   }
 
   fetchData= async()=>{
     const response = await fetch('http://localhost:4550/accordingToTheBrand');
     const diagramdata = await response.json();
     this.setState({data: diagramdata});
+    const currently = await (await fetch ('http://localhost:4550/currentlyInStock')).json();
+        this.setState({osszes:currently.number});
   }
   componentDidMount(){
     this.fetchData();
@@ -26,27 +29,27 @@ export default class ChartBrand extends Component {
     }
     
     const berendeltDbs = () => {
-      return arr.map(x => x.berendeltDb);
+      return arr.map(x => x.berendeltDb/this.state.osszes);
     }
     
     const data = {
-      labels: brandNames,
-      data: berendeltDbs
+      labels: brandNames(),
+      data: berendeltDbs()
     };
-    
+
     return (
       <View>
         <Text>Márkák</Text>
         <ProgressChart
-          data={[0.4, 0.6, 0.8]}
+          data={data}
           width={Dimensions.get('window').width - 16}
           height={220}
           chartConfig={{
             backgroundColor: '#1cc910',
             backgroundGradientFrom: '#eff3ff',
-            backgroundGradientTo: '#efefef',
+            backgroundGradientTo: '#bdedfe',
             decimalPlaces: 2,
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(30, 40, 51, ${opacity})`,
             style: {
               borderRadius: 16,
             },
