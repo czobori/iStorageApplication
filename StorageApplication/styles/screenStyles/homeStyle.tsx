@@ -1,5 +1,4 @@
 import { StyleSheet} from 'react-native';
-
 const homePageStyles = StyleSheet.create({
     cim:{
         textAlign:'center',

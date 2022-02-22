@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Text, View,FlatList} from 'react-native';
 import { userComponentStyles } from '../styles/componentStyles/UserDataComponentStyle';
-import { AntDesign,FontAwesome5,MaterialCommunityIcons,Fontisto,Feather, Entypo } from '@expo/vector-icons';
+import { AntDesign,Entypo } from '@expo/vector-icons';
 export default class User extends Component {
   state ={
     data:[]
@@ -24,7 +24,6 @@ export default class User extends Component {
           data={this.state.data}
           keyExtractor={(item,index) => index.toString()}
           renderItem={({item}) =>
-
             <View style={userComponentStyles.div}>
               <Text style={userComponentStyles.nevek}>{item.full_name}</Text>
               <Text style={userComponentStyles.text}><AntDesign name="user" size={15} color="#fff" /> {item.username}</Text>

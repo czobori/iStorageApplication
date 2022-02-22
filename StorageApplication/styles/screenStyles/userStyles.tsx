@@ -1,5 +1,4 @@
 import { StyleSheet} from 'react-native';
-
 const userPageStyles = StyleSheet.create({
     text: {
       fontSize:15,

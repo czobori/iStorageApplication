@@ -1,5 +1,4 @@
 import { StyleSheet} from 'react-native';
-
 const progressBarStyles = StyleSheet.create({
     bar:{
         borderRadius:5,

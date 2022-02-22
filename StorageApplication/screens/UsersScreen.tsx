@@ -6,7 +6,6 @@ import { ScrollView } from 'react-native-gesture-handler';
 import User from "../element/User";
 
 export default function UsersScreen({ navigation }: RootTabScreenProps<'UsersScreen'>) {
-  //AppRegistry.registerComponent("", () => User);
   return(
     <View style={containerStyles.container}>
       <Text style={userPageStyles.text}>Raktárosok</Text>

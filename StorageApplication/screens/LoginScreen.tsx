@@ -4,8 +4,6 @@ import { RootTabScreenProps } from '../types';
 import { containerStyles } from '../styles/element/containerStyle';
 import { loginPageStyles } from '../styles/screenStyles/loginStyles';
 import React from 'react';
-import { color } from 'react-native-reanimated';
-
 
 export default function LoginScreen({ navigation }: RootTabScreenProps<'LoginScreen'>) {
   return (

@@ -11,8 +11,6 @@ export default function InfoScreen() {
       <Text style={infoPageStyles.title}>Információ</Text>
       <View style={infoPageStyles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <ScreenInfo path="/screens/InfoScreen.tsx" />
-
-      {/* Use a light status bar on iOS to account for the black space above the modal */}
       <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
     </View>
   );

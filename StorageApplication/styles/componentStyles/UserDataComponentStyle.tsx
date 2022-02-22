@@ -1,5 +1,4 @@
 import { StyleSheet} from 'react-native';
-
 const userComponentStyles = StyleSheet.create({
   div:{
     backgroundColor: '#003247',
