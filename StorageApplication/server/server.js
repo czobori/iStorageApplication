@@ -6,7 +6,6 @@ const bodyParser = require('body-parser');
 import userdata from './routers/usersData';
 import brandData from './routers/brandAccordData';
 import currentData from './routers/currentlyinstockData';
-import con from './database';
 
 app.use(bodyParser.json({type:'application/json'}));
 app.use(bodyParser.urlencoded({extended:true}));

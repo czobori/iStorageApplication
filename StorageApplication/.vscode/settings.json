@@ -5,6 +5,7 @@
         "Beérkezett",
         "Bejelentkezés",
         "berendelt",
+        "currentlyinstock",
         "diagramdata",
         "Entypo",
         "feher",
@@ -29,6 +30,7 @@
         "Raktár",
         "somuch",
         "szam",
-        "teltsége"
+        "teltsége",
+        "userdata"
     ]
 }
