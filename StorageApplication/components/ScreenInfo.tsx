@@ -9,17 +9,11 @@ export default function ScreenInfo({ path }: { path: string }) {
   return (
     <View>
       <View style={screenInfoTextStyles.getStartedContainer}>
-        <Text
-          style={screenInfoTextStyles.getStartedText}
-          lightColor="rgba(0,0,0,0.8)"
-          darkColor="rgba(255,255,255,0.8)">
+        <Text style={screenInfoTextStyles.getStartedText} lightColor="rgba(0,0,0,0.8)" darkColor="rgba(255,255,255,0.8)">
           Üdvözöljük az IStorage alkalmazásában!
         </Text>
 
-        <Text
-          style={screenInfoTextStyles.getStartedText}
-          lightColor="rgba(0,0,0,0.8)"
-          darkColor="rgba(255,255,255,0.8)">
+        <Text style={screenInfoTextStyles.getStartedText} lightColor="rgba(0,0,0,0.8)" darkColor="rgba(255,255,255,0.8)">
           Bejelentkezni csak azok a dolgozók tudnak, akik már benne vannak a rendszerünkben. Ha még nincs benne, akkor forduljon a raktár vezetőjéhez. Más probléma esetén keresse meg az Admint.
         </Text>
       </View>

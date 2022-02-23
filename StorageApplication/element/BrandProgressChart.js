@@ -45,10 +45,7 @@ export default class ChartBrand extends Component {
           width={Dimensions.get('window').width - 40}
           height={220}
           chartConfig={progressCartConfig}
-          style={{
-            marginVertical: 0,
-            borderRadius: 16,
-          }}
+          style={{marginVertical: 0,borderRadius: 16,}}
           strokeWidth= {15}
         />
       </View>
