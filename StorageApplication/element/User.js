@@ -11,7 +11,6 @@ export default class User extends Component {
     const response = await fetch('http://localhost:4550/user');
     const users = await response.json();
     this.setState({data: users});
-    
   }
   componentDidMount(){
     this.fetchData();
@@ -19,16 +18,15 @@ export default class User extends Component {
   render() {
     return (
       <View>
-
         <FlatList
           data={this.state.data}
           keyExtractor={(item,index) => index.toString()}
           renderItem={({item}) =>
             <View style={userComponentStyles.div}>
               <Text style={userComponentStyles.nevek}>{item.full_name}</Text>
-              <Text style={userComponentStyles.text}><AntDesign name="user" size={15} color="#fff" /> {item.username}</Text>
-              <Text style={userComponentStyles.text}><Entypo name="mail" size={15} color="#fff" /> {item.email}</Text>
-              <Text style={userComponentStyles.text}><Entypo name="old-phone" size={15} color="#fff" /> {item.phone_number}</Text>
+              <Text style={userComponentStyles.text}><AntDesign name="user" style={userComponentStyles.icons} /> {item.username}</Text>
+              <Text style={userComponentStyles.text}><Entypo name="mail" style={userComponentStyles.icons} /> {item.email}</Text>
+              <Text style={userComponentStyles.text}><Entypo name="old-phone" style={userComponentStyles.icons} /> {item.phone_number}</Text>
             </View>
           }  
         />

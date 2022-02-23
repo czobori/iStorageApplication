@@ -5,10 +5,7 @@ import con from '../database';
 router.get('/user',function(req,res){
     con.query('SELECT * FROM `user` order by full_name',function(error,rows,fields){
         if(error) console.log(error);
-        else{
-            console.log(rows);
-            res.send(rows);
-        }
+        else res.send(rows);
     });
 });
 export default router;

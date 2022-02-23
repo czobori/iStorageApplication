@@ -29,16 +29,12 @@ export default class ChartBrand extends Component {
     
     const berendeltDbs = () => {
       return arr.map(x => x.berendeltDb/this.state.osszes);
-      //return arr.map(x => x.berendeltDb);
     }
     
     const data = {
       labels: brandNames(),
       data: berendeltDbs(),
     };
-    console.log(brandNames());
-    console.log(berendeltDbs());
-    console.log(this.state.osszes);
 
     return (
       <View>
@@ -46,7 +42,7 @@ export default class ChartBrand extends Component {
         <Text style={homePageStyles.informacio}>(bentről kifelé haladva)</Text>
         <ProgressChart
           data={data}
-          width={Dimensions.get('window').width - 16}
+          width={Dimensions.get('window').width - 40}
           height={220}
           chartConfig={progressCartConfig}
           style={{
@@ -56,7 +52,6 @@ export default class ChartBrand extends Component {
           strokeWidth= {15}
         />
       </View>
-       
     )
   }
 }

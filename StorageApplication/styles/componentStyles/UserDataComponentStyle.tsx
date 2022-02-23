@@ -14,6 +14,10 @@ const userComponentStyles = StyleSheet.create({
   nevek:{
     color:'#fff',
     fontWeight: "bold"
+  },
+  icons:{
+    fontSize:15,
+    color:'#fff'
   }
-  });
+});
 export {userComponentStyles};

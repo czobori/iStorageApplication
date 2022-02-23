@@ -14,7 +14,7 @@ import UsersScreen from '../screens/UsersScreen';
 import HomeScreen from '../screens/HomeScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
-import { AntDesign,FontAwesome5,MaterialCommunityIcons } from '@expo/vector-icons';
+import { FontAwesome5,MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
