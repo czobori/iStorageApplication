@@ -13,5 +13,13 @@ const warehousefullStyle = StyleSheet.create({
         fontSize:22,
         paddingBottom:2
     },
+    div:{
+        alignItems:"center",
+        backgroundColor:'#E7F2FD',
+        borderRadius:16,
+        width:Dimensions.get('window').width - 40,
+        paddingTop:3,
+        paddingBottom:10
+    }
 });
 export {warehousefullStyle};

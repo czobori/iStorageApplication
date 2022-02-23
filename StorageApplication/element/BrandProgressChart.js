@@ -37,7 +37,7 @@ export default class ChartBrand extends Component {
     };
 
     return (
-      <View>
+      <View style={homePageStyles.div}>
         <Text style={homePageStyles.cim}>Márkák a raktárban</Text>
         <Text style={homePageStyles.informacio}>(bentről kifelé haladva)</Text>
         <ProgressChart
@@ -46,7 +46,7 @@ export default class ChartBrand extends Component {
           height={220}
           chartConfig={progressCartConfig}
           style={{
-            marginVertical: 8,
+            marginVertical: 0,
             borderRadius: 16,
           }}
           strokeWidth= {15}
