@@ -1,5 +1,5 @@
-import { StyleSheet} from 'react-native';
-const progressBarStyles = StyleSheet.create({
+import { StyleSheet,Dimensions} from 'react-native';
+const warehousefullStyle = StyleSheet.create({
     bar:{
         borderRadius:5,
         height:10,
@@ -10,7 +10,8 @@ const progressBarStyles = StyleSheet.create({
     },
     text:{
         textAlign:'center',
-        fontSize:24
-    }
+        fontSize:22,
+        paddingBottom:2
+    },
 });
-export {progressBarStyles};
+export {warehousefullStyle};

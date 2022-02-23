@@ -15,7 +15,8 @@ const deliveryCompStyles = StyleSheet.create({
     borderRadius:16,
     width:Dimensions.get('window').width - 40,
     paddingBottom:10,
-    paddingTop:10
+    paddingTop:10,
+    marginTop:15
   }
 });
 export {deliveryCompStyles};

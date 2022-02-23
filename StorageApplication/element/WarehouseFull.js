@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Text, View,Dimensions} from 'react-native';
 import * as Progress from 'react-native-progress';
-import { progressBarStyles } from '../styles/element/progressbarStyle';
+import { warehousefullStyle } from '../styles/element/progressbarStyle';
 export default class WarehouseSaturation extends Component{
     state ={
         szam:0
@@ -17,8 +17,8 @@ export default class WarehouseSaturation extends Component{
     render(){
         return(
             <View>
-                <Text style={progressBarStyles.text}>Raktár teltsége: {this.state.szam*100}%</Text>
-                <Progress.Bar progress={this.state.szam} width={Dimensions.get('window').width - 100} style={progressBarStyles.bar} />
+                <Text style={warehousefullStyle.text}>Raktár teltsége: {this.state.szam*100}%</Text>
+                <Progress.Bar progress={this.state.szam} width={Dimensions.get('window').width - 100} style={warehousefullStyle.bar} />
             </View>
         )
     }

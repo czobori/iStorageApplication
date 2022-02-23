@@ -13,6 +13,7 @@
         "Entypo",
         "erkezik",
         "Érkezik",
+        "érkeznek",
         "eszköz",
         "feher",
         "Felhasználók",
@@ -20,12 +21,14 @@
         "folytatáshoz",
         "Fontisto",
         "haladva",
+        "Hamarosan",
         "hány",
         "hely",
         "istorage",
         "jelentkezzen",
         "jelszó",
         "kérem",
+        "készülékek",
         "Kezdőlap",
         "kifelé",
         "LÁTSZIK",
@@ -48,6 +51,7 @@
         "somuch",
         "szam",
         "teltsége",
-        "userdata"
+        "userdata",
+        "warehousefull"
     ]
 }
