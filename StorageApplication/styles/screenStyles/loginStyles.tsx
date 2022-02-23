@@ -1,4 +1,4 @@
-import { StyleSheet} from 'react-native';
+import { StyleSheet,Dimensions} from 'react-native';
 
 const loginPageStyles = StyleSheet.create({
   button: {
@@ -22,7 +22,7 @@ const loginPageStyles = StyleSheet.create({
     margin:5,
     borderWidth:1,
     padding:5,
-    width: 200,
+    width:Dimensions.get('window').width - 100,
     textAlign: 'center',
     borderColor:'#FDFEFE',
     borderRadius:5,
