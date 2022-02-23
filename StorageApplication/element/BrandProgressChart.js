@@ -29,12 +29,16 @@ export default class ChartBrand extends Component {
     
     const berendeltDbs = () => {
       return arr.map(x => x.berendeltDb/this.state.osszes);
+      //return arr.map(x => x.berendeltDb);
     }
     
     const data = {
       labels: brandNames(),
       data: berendeltDbs(),
     };
+    console.log(brandNames());
+    console.log(berendeltDbs());
+    console.log(this.state.osszes);
 
     return (
       <View>
