@@ -12,7 +12,7 @@ const homePageStyles = StyleSheet.create({
         backgroundColor:"#DCF5FF",
         borderRadius:16,
         width:Dimensions.get('window').width - 40,
-        marginTop:15
+        marginTop:15,
     }
 });
 export {homePageStyles};

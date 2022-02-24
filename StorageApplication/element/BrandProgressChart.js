@@ -42,11 +42,12 @@ export default class ChartBrand extends Component {
         <Text style={homePageStyles.informacio}>(a körből kifelé haladva, a magarázatnál fentről lefelé)</Text>
         <ProgressChart
           data={data}
-          width={Dimensions.get('window').width - 40}
-          height={220}
+          width={Dimensions.get('window').width-50 }
+          height={180}
           chartConfig={progressCartConfig}
-          style={{marginVertical: 0,borderRadius: 16,}}
-          strokeWidth= {15}
+          style={{borderRadius: 16,}}
+          strokeWidth= {12}
+          
         />
       </View>
     )

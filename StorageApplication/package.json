@@ -55,6 +55,7 @@
     "react-native-screens": "~3.10.1",
     "react-native-svg": "^12.1.1",
     "react-native-web": "0.17.1",
+    "react-progress-label": "^3.1.7",
     "sequelize": "^6.16.1",
     "victory-pie": "^36.3.0"
   },
