@@ -12,9 +12,10 @@ import NotFoundScreen from '../screens/NotFoundScreen';
 import LoginScreen from '../screens/LoginScreen';
 import UsersScreen from '../screens/UsersScreen';
 import HomeScreen from '../screens/HomeScreen';
+import OrderInScreen from '../screens/OrderInScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
-import { FontAwesome5,MaterialCommunityIcons } from '@expo/vector-icons';
+import { FontAwesome5,MaterialCommunityIcons,Entypo  } from '@expo/vector-icons';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -56,7 +57,7 @@ function BottomTabNavigator() {
         component={LoginScreen}
         options={({ navigation }: RootTabScreenProps<'LoginScreen'>) => ({
           title: 'Bejelentkezés',
-          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="login-variant" size={24} color="#1e2833" />,
+          tabBarIcon: ({ color }) => <Entypo name="login" size={24} color="#1e2833" />,
           headerRight: () => (
             <Pressable
               onPress={() => navigation.navigate('Info')}
@@ -79,6 +80,14 @@ function BottomTabNavigator() {
         options={({ navigation }: RootTabScreenProps<'HomeScreen'>) => ({
           title: 'Kezdőlap',
           tabBarIcon: ({ color }) => <FontAwesome5 name="home" size={24} color="#1e2833" />,
+        })}
+      />
+      <BottomTab.Screen
+        name="OrderInScreen"
+        component={OrderInScreen}
+        options={({ navigation }: RootTabScreenProps<'OrderInScreen'>) => ({
+          title: 'Érkezik',
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="truck-fast" size={29} color="#1e2833" />,
         })}
       />
       <BottomTab.Screen
