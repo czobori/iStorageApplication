@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Text, View,FlatList} from 'react-native';
+import { stockComponentStyles } from '../styles/componentStyles/StockDataComponentStyle';
 
 export default class Stocks extends Component {
   state ={
@@ -14,6 +15,7 @@ export default class Stocks extends Component {
   componentDidMount(){
     this.fetchData();
   }
+  // https://stackoverflow.com/questions/34590369/formatting-a-date-string-in-react-native
   render() {
     return (
       <View>
@@ -21,9 +23,8 @@ export default class Stocks extends Component {
           data={this.state.data}
           keyExtractor={(item,index) => index.toString()}
           renderItem={({item}) =>
-            <View>
-              <Text>Dátum szarul: {item.date}</Text>
-              <Text></Text>
+            <View style={stockComponentStyles.div}>
+              <Text style={stockComponentStyles.text}>{item.date} - {item.username}</Text>
             </View>
           }  
         />
