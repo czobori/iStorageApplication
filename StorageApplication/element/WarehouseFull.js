@@ -4,7 +4,7 @@ import * as Progress from 'react-native-progress';
 import { warehousefullStyle } from '../styles/element/progressbarStyle';
 export default class WarehouseSaturation extends Component{
     state ={
-        szam:0
+        szam:0,
     }
     
     fetchData= async()=>{
@@ -14,10 +14,12 @@ export default class WarehouseSaturation extends Component{
     componentDidMount(){
         this.fetchData();
     }
+    
     render(){
+        const szazalekkerekitve = Math.round((this.state.szam*100)*100)/100;
         return(
             <View style={warehousefullStyle.div}>
-                <Text style={warehousefullStyle.text}>Raktár teltsége: {this.state.szam*100}%</Text>
+                <Text style={warehousefullStyle.text}>Raktár teltsége: {szazalekkerekitve}%</Text>
                 <Progress.Bar progress={this.state.szam} width={Dimensions.get('window').width - 100} style={warehousefullStyle.bar} />
             </View>
         )
