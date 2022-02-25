@@ -81,7 +81,7 @@ function BottomTabNavigator() {
         name="OrderInScreen"
         component={OrderInScreen}
         options={({ navigation }: RootTabScreenProps<'OrderInScreen'>) => ({
-          title: 'Érkezik',
+          title: 'Beérkező',
           tabBarIcon: ({ color }) => <MaterialCommunityIcons name="truck-fast" size={29} color="#1e2833" />,
         })}
       />
