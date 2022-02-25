@@ -18,7 +18,7 @@ export default class Stocks extends Component {
   componentDidMount(){
     this.fetchData();
   }
-  // https://stackoverflow.com/questions/34590369/formatting-a-date-string-in-react-native
+ 
   render() {
     Moment.locale('en');
     return (

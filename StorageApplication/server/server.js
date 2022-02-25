@@ -9,6 +9,7 @@ import currentData from './routers/currentlyinstockData';
 import deliverynumber from './routers/deliveryToStorageData';
 import warehouseData from './routers/warehouseData';
 import stockData from './routers/stockData';
+import soldData from './routers/soldData';
 
 app.use(bodyParser.json({type:'application/json'}));
 app.use(bodyParser.urlencoded({extended:true}));
@@ -19,6 +20,7 @@ app.use(currentData);
 app.use(deliverynumber);
 app.use(warehouseData);
 app.use(stockData);
+app.use(soldData);
 
 const server = app.listen(4550, function(){
     const host = server.address().address

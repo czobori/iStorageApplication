@@ -13,6 +13,7 @@ import LoginScreen from '../screens/LoginScreen';
 import UsersScreen from '../screens/UsersScreen';
 import HomeScreen from '../screens/HomeScreen';
 import OrderInScreen from '../screens/OrderInScreen';
+import OrderOutScreen from '../screens/OrderOutScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 import { FontAwesome5,MaterialCommunityIcons,Entypo  } from '@expo/vector-icons';
@@ -82,6 +83,14 @@ function BottomTabNavigator() {
         component={OrderInScreen}
         options={({ navigation }: RootTabScreenProps<'OrderInScreen'>) => ({
           title: 'Beérkező',
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="truck-fast" size={29} color="#1e2833" />,
+        })}
+      />
+      <BottomTab.Screen
+        name="OrderOutScreen"
+        component={OrderOutScreen}
+        options={({ navigation }: RootTabScreenProps<'OrderOutScreen'>) => ({
+          title: 'Kimenő',
           tabBarIcon: ({ color }) => <MaterialCommunityIcons name="truck-fast" size={29} color="#1e2833" />,
         })}
       />
