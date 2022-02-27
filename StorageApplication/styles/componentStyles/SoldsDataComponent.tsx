@@ -17,7 +17,13 @@ const soldsComponentStyles = StyleSheet.create({
     fontSize:24,
     fontWeight:"bold",
     textAlign:"center",
-    padding:10
+  },
+  megjegyzes:{
+    textAlign:"center",
+    marginBottom:10
+  },
+  adat:{
+    textAlign:"right",
   }
 });
 export {soldsComponentStyles};

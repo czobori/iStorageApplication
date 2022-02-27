@@ -17,6 +17,15 @@ const stockComponentStyles = StyleSheet.create({
   rendelt:{
     textAlign:'right',
     //paddingRight:5
+  },
+  title:{
+    fontSize:24,
+    fontWeight:"bold",
+    textAlign:"center"
+  },
+  megjegyzes:{
+    textAlign:"center",
+    marginBottom:10
   }
 });
 export {stockComponentStyles};

@@ -26,13 +26,14 @@ export default class SoldsThisMonth extends Component {
     return (
       <View>
       <Text style={soldsComponentStyles.idotartamT}>{Moment(this.state.idotartam).format('YYYY.MMMM')}</Text>
+      <Text style={soldsComponentStyles.megjegyzes}>(eladott termékek)</Text>
         <FlatList
           data={this.state.data}
           keyExtractor={(item,index) => index.toString()}
           renderItem={({item}) =>
             <View style={soldsComponentStyles.div}>
-              <Text>{Moment(item.date).format('YYYY.MM.DD hh:mm')} - {item.client_name}</Text>
-              <Text style={soldsComponentStyles.telefonadat}>{item.brand_name} {item.model_name} {item.phone_color} {item.capacity}GB ({item.amount} db)</Text>
+              <Text style={soldsComponentStyles.adat}>{item.client_name} - {Moment(item.date).format('YYYY.MM.DD HH:mm')}</Text>
+              <Text style={soldsComponentStyles.telefonadat}>{(item.brand_name).toUpperCase()} {(item.model_name).toUpperCase()} {item.phone_color} {item.capacity}GB ({item.amount} db)</Text>
             </View>
           }  
         />
