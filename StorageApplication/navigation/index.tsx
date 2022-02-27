@@ -16,7 +16,7 @@ import OrderInScreen from '../screens/OrderInScreen';
 import OrderOutScreen from '../screens/OrderOutScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
-import { FontAwesome5,MaterialCommunityIcons,Entypo  } from '@expo/vector-icons';
+import { FontAwesome5,MaterialCommunityIcons,Entypo,Fontisto  } from '@expo/vector-icons';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -83,7 +83,7 @@ function BottomTabNavigator() {
         component={OrderInScreen}
         options={({ navigation }: RootTabScreenProps<'OrderInScreen'>) => ({
           title: 'Beérkező',
-          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="truck-fast" size={29} color="#1e2833" />,
+          tabBarIcon: ({ color }) => <Fontisto name="truck" size={24} color="#1e2833" />,
         })}
       />
       <BottomTab.Screen
@@ -91,7 +91,7 @@ function BottomTabNavigator() {
         component={OrderOutScreen}
         options={({ navigation }: RootTabScreenProps<'OrderOutScreen'>) => ({
           title: 'Kimenő',
-          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="truck-fast" size={29} color="#1e2833" />,
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="truck-check-outline" size={29} color="#1e2833" />,
         })}
       />
       <BottomTab.Screen
