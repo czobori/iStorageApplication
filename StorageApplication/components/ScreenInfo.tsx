@@ -1,5 +1,5 @@
 import * as WebBrowser from 'expo-web-browser';
-import { StyleSheet, TouchableOpacity } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 
 import Colors from '../constants/Colors';
 import { Text, View } from './Themed';
@@ -7,13 +7,13 @@ import {screenInfoTextStyles} from '../styles/componentStyles/ScreenInfoComponen
 
 export default function ScreenInfo({ path }: { path: string }) {
   return (
-    <View>
+    <View style={screenInfoTextStyles.div}>
       <View style={screenInfoTextStyles.getStartedContainer}>
-        <Text style={screenInfoTextStyles.getStartedText} lightColor="rgba(0,0,0,0.8)" darkColor="rgba(255,255,255,0.8)">
-          Üdvözöljük az IStorage alkalmazásában!
+        <Text style={screenInfoTextStyles.getStartedText}>
+          Üdvözöljük!
         </Text>
 
-        <Text style={screenInfoTextStyles.getStartedText} lightColor="rgba(0,0,0,0.8)" darkColor="rgba(255,255,255,0.8)">
+        <Text style={screenInfoTextStyles.getStartedText} >
           Bejelentkezni csak azok a dolgozók tudnak, akik már benne vannak a rendszerünkben. Ha még nincs benne, akkor forduljon a raktár vezetőjéhez. Más probléma esetén keresse meg az Admint.
         </Text>
       </View>

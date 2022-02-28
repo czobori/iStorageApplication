@@ -12,7 +12,7 @@ const deliveryCompStyles = StyleSheet.create({
   },
   div:{
     backgroundColor:"#1e2833",
-    borderRadius:16,
+    borderRadius:15,
     width:Dimensions.get('window').width - 40,
     paddingBottom:10,
     paddingTop:10,

@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {Text, View,FlatList} from 'react-native';
 import Moment from 'moment';
-import { format } from "date-fns";
 import { soldsComponentStyles } from '../styles/componentStyles/SoldsDataComponent';
 
 export default class SoldsThisMonth extends Component {
@@ -25,8 +24,8 @@ export default class SoldsThisMonth extends Component {
     Moment.locale('hu');
     return (
       <View>
-      <Text style={soldsComponentStyles.idotartamT}>{Moment(this.state.idotartam).format('YYYY.MMMM')}</Text>
-      <Text style={soldsComponentStyles.megjegyzes}>(eladott termékek)</Text>
+        <Text style={soldsComponentStyles.idotartamT}>{Moment(this.state.idotartam).format('YYYY.MMMM')}</Text>
+        <Text style={soldsComponentStyles.megjegyzes}>ELADOTT TERMÉKEK</Text>
         <FlatList
           data={this.state.data}
           keyExtractor={(item,index) => index.toString()}

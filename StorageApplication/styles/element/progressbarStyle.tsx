@@ -16,7 +16,7 @@ const warehousefullStyle = StyleSheet.create({
     div:{
         alignItems:"center",
         backgroundColor:'#E7F2FD',
-        borderRadius:16,
+        borderRadius:15,
         width:Dimensions.get('window').width - 40,
         paddingTop:3,
         paddingBottom:10

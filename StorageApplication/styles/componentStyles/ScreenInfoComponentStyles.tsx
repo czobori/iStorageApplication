@@ -1,15 +1,8 @@
-import { StyleSheet} from 'react-native';
+import { StyleSheet,Dimensions} from 'react-native';
 const screenInfoTextStyles = StyleSheet.create({
   getStartedContainer: {
     alignItems: 'center',
-    marginHorizontal: 50,
-  },
-  homeScreenFilename: {
-    marginVertical: 7,
-  },
-  codeHighlightContainer: {
-    borderRadius: 3,
-    paddingHorizontal: 4,
+    marginHorizontal: 20,
   },
   getStartedText: {
     fontSize: 17,
@@ -28,5 +21,10 @@ const screenInfoTextStyles = StyleSheet.create({
   helpLinkText: {
     textAlign: 'center',
   },
+  div:{
+    width:Dimensions.get('window').width - 40,
+    borderRadius:10,
+    opacity:0.8
+  }
 });
 export {screenInfoTextStyles};

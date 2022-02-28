@@ -6,7 +6,7 @@ const soldsComponentStyles = StyleSheet.create({
     paddingVertical:2,
     marginHorizontal:5,
     marginVertical:5,
-    borderRadius:5,
+    borderRadius:15,
     borderWidth:2,
     borderBottomColor:'#003247'
   },
@@ -17,10 +17,14 @@ const soldsComponentStyles = StyleSheet.create({
     fontSize:24,
     fontWeight:"bold",
     textAlign:"center",
+    color:'#fff',
+    marginTop:15
   },
   megjegyzes:{
     textAlign:"center",
-    marginBottom:10
+    marginBottom:10,
+    color:'#fff',
+    fontSize:18
   },
   adat:{
     textAlign:"right",

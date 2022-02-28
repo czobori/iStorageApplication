@@ -5,7 +5,7 @@ const loginPageStyles = StyleSheet.create({
     backgroundColor: "#003247",
     padding:10,
     margin:10,
-    borderRadius:5,
+    borderRadius:10,
     borderWidth: 1,
     borderColor:'#fff'
   },
@@ -25,13 +25,13 @@ const loginPageStyles = StyleSheet.create({
     width:Dimensions.get('window').width - 100,
     textAlign: 'center',
     borderColor:'#FDFEFE',
-    borderRadius:5,
+    borderRadius:15,
     backgroundColor: '#003247',
     color:'#fff'
   },
   istorage:{
-    fontSize:30,
-    marginBottom:20,
+    fontSize:34,
+    marginBottom:15,
     fontFamily:"Cochin-Italic",
   },
   feher:{

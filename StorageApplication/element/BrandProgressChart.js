@@ -15,7 +15,7 @@ export default class ChartBrand extends Component {
     const diagramdata = await response.json();
     this.setState({data: diagramdata});
     const currently = await (await fetch ('http://localhost:4550/currentlyInStock')).json();
-        this.setState({osszes:currently.number});
+    this.setState({osszes:currently.number});
   }
   componentDidMount(){
     this.fetchData();
@@ -47,7 +47,6 @@ export default class ChartBrand extends Component {
           chartConfig={progressCartConfig}
           style={{borderRadius: 16,}}
           strokeWidth= {12}
-          
         />
       </View>
     )

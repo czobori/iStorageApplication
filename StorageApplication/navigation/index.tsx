@@ -16,7 +16,7 @@ import OrderInScreen from '../screens/OrderInScreen';
 import OrderOutScreen from '../screens/OrderOutScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
-import { FontAwesome5,MaterialCommunityIcons,Entypo,Fontisto  } from '@expo/vector-icons';
+import { FontAwesome5,MaterialCommunityIcons,Entypo,Fontisto,MaterialIcons  } from '@expo/vector-icons';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -50,9 +50,7 @@ function BottomTabNavigator() {
   return (
     <BottomTab.Navigator
       initialRouteName="LoginScreen"
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme].tint,
-      }}>
+      screenOptions={{tabBarActiveTintColor: Colors[colorScheme].tint,}}>
       <BottomTab.Screen
         name="LoginScreen"
         component={LoginScreen}
@@ -62,9 +60,7 @@ function BottomTabNavigator() {
           headerRight: () => (
             <Pressable
               onPress={() => navigation.navigate('Info')}
-              style={({ pressed }) => ({
-                opacity: pressed ? 0.5 : 1,
-              })}>
+              style={({ pressed }) => ({ opacity: pressed ? 0.5 : 1,})}>
               <FontAwesome name="info-circle" size={25} color="#1e2833" style={{ marginRight: 15 }} />
             </Pressable>
           ),
@@ -74,8 +70,8 @@ function BottomTabNavigator() {
         name="HomeScreen"
         component={HomeScreen}
         options={({ navigation }: RootTabScreenProps<'HomeScreen'>) => ({
-          title: 'Kezdőlap',
-          tabBarIcon: ({ color }) => <FontAwesome5 name="home" size={24} color="#1e2833" />,
+          title: 'Statisztikák',
+          tabBarIcon: ({ color }) => <MaterialIcons name="storage" size={27} color="#1e2833" />,
         })}
       />
       <BottomTab.Screen

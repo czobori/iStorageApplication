@@ -4,10 +4,15 @@ import { RootTabScreenProps } from '../types';
 import { containerStyles } from '../styles/element/containerStyle';
 import { loginPageStyles } from '../styles/screenStyles/loginStyles';
 import React from 'react';
+import { LinearGradient } from 'expo-linear-gradient';
 
 export default function LoginScreen({ navigation }: RootTabScreenProps<'LoginScreen'>) {
   return (
     <View style={containerStyles.container}>
+      <LinearGradient
+        colors={['rgba(0,0,0,0.8)', 'transparent']}
+        style={containerStyles.background}
+      />
       <Text style={loginPageStyles.istorage}>IStorage</Text>
       <Text style={loginPageStyles.text}>A folytatáshoz kérem jelentkezzen be!</Text>
       <TextInput style={loginPageStyles.input} 
