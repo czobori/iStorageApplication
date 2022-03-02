@@ -13,18 +13,18 @@ const soldsComponentStyles = StyleSheet.create({
   telefonadat:{
     fontWeight: "bold"
   },
-  idotartamT:{
+  eladottszov:{
     fontSize:24,
     fontWeight:"bold",
     textAlign:"center",
     color:'#fff',
     marginTop:15
   },
-  megjegyzes:{
+  akthonap:{
     textAlign:"center",
     marginBottom:10,
     color:'#fff',
-    fontSize:18
+    fontSize:20
   },
   adat:{
     textAlign:"right",

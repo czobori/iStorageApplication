@@ -24,8 +24,8 @@ export default class SoldsThisMonth extends Component {
     Moment.locale('hu');
     return (
       <View>
-        <Text style={soldsComponentStyles.idotartamT}>{Moment(this.state.idotartam).format('YYYY.MMMM')}</Text>
-        <Text style={soldsComponentStyles.megjegyzes}>ELADOTT TERMÉKEK</Text>
+        <Text style={soldsComponentStyles.eladottszov}>ELADOTT TERMÉKEK</Text>
+        <Text style={soldsComponentStyles.akthonap}>{Moment(this.state.idotartam).format('YYYY.MMMM')}</Text>
         <FlatList
           data={this.state.data}
           keyExtractor={(item,index) => index.toString()}

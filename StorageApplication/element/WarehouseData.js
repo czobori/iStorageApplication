@@ -11,7 +11,6 @@ export default class Warehouse extends Component {
     const response = await fetch('http://localhost:4550/warehouseData');
     const warehouse = await response.json();
     this.setState({data: warehouse});
-    console.log(this.state.data);
   }
   componentDidMount(){
     this.fetchData();

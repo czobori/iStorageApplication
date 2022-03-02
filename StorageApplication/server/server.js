@@ -3,6 +3,7 @@ const app = express();
 const cors = require('cors');
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
+
 import userdata from './routers/usersData';
 import brandData from './routers/brandAccordData';
 import currentData from './routers/currentlyinstockData';
