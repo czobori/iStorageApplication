@@ -11,7 +11,7 @@ const deliveryCompStyles = StyleSheet.create({
     textAlign:"center"
   },
   div:{
-    backgroundColor:"#1e2833",
+    backgroundColor:"#506479",
     borderRadius:15,
     width:Dimensions.get('window').width - 40,
     paddingBottom:10,

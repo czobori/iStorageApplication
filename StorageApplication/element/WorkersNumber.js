@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import {Text, View, Dimensions} from 'react-native';
+import {Text, View} from 'react-native';
+import { FontAwesome5 } from '@expo/vector-icons';
+import { workersCountStyle } from '../styles/element/workNumStyle';
 
 export default class UsersNumber extends Component{
     state={
@@ -14,8 +16,10 @@ export default class UsersNumber extends Component{
     }
     render(){
         return(
-            <View>
-                <Text>A raktárban {this.state.ember} fő dolgozik</Text>
+            <View style={workersCountStyle.div}>
+                <FontAwesome5 name="house-user" style={workersCountStyle.icons} />
+                <Text style={workersCountStyle.text}>A raktárban dolgozók száma</Text>
+                <Text style={workersCountStyle.text}>{this.state.ember} fő (összesen)</Text>
             </View>
         )
     }

@@ -8,4 +8,7 @@ export const progressCartConfig ={
     style: {
         borderRadius: 16,
     },
+    barPercentage: 1,
+    useShadowColorFromDataset: false,
+    
 };
