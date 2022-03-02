@@ -7,6 +7,7 @@ import OnDelivery from '../element/DeliveryToStore';
 import Warehouse from '../element/WarehouseData';
 import { ScrollView } from 'react-native-gesture-handler';
 import { LinearGradient } from 'expo-linear-gradient';
+import UsersNumber from '../element/WorkersNumber';
 
 export default function HomeScreen({ navigation }: RootTabScreenProps<'HomeScreen'>) {
   return(
@@ -20,6 +21,7 @@ export default function HomeScreen({ navigation }: RootTabScreenProps<'HomeScree
         <WarehouseSaturation/>
         <ChartBrand/>
         <OnDelivery/>
+        <UsersNumber/>
       </ScrollView>
     </View>
   )
