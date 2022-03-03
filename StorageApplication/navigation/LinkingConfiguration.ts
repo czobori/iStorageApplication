@@ -22,6 +22,21 @@ const linking: LinkingOptions<RootStackParamList> = {
             screens:{
               UsersScreen: 'users',
             }
+          },
+          OrderInScreen:{
+            screens:{
+              OrderInScreen : 'orderIn',
+            }
+          },
+          OrderOutScreen:{
+            screens:{
+              OrderOutScreen: 'orderOut',
+            }
+          },
+          PhoneHereScreen:{
+            screens:{
+              PhoneHereScreen: 'phoneHere',
+            }
           }
         },
       },

@@ -14,9 +14,10 @@ import UsersScreen from '../screens/UsersScreen';
 import HomeScreen from '../screens/HomeScreen';
 import OrderInScreen from '../screens/OrderInScreen';
 import OrderOutScreen from '../screens/OrderOutScreen';
+import PhoneHereScreen from '../screens/PhoneHereScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
-import { FontAwesome5,MaterialCommunityIcons,Entypo,Fontisto,MaterialIcons  } from '@expo/vector-icons';
+import { FontAwesome5,MaterialCommunityIcons,Entypo,Fontisto,MaterialIcons} from '@expo/vector-icons';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -83,6 +84,14 @@ function BottomTabNavigator() {
         })}
       />
       <BottomTab.Screen
+        name="PhoneHereScreen"
+        component={PhoneHereScreen}
+        options={({ navigation }: RootTabScreenProps<'PhoneHereScreen'>) => ({
+          title: 'Raktáron',
+          tabBarIcon: ({ color }) => <FontAwesome name="inbox" size={26} color="#1e2833" />,
+        })}
+      />
+      <BottomTab.Screen
         name="OrderOutScreen"
         component={OrderOutScreen}
         options={({ navigation }: RootTabScreenProps<'OrderOutScreen'>) => ({
@@ -103,9 +112,7 @@ function BottomTabNavigator() {
   );
 }
 
-/**
- * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
- */
+/** You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/  */
 function TabBarIcon(props: {
   name: React.ComponentProps<typeof FontAwesome>['name'];
   color: string;

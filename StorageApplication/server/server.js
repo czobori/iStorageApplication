@@ -14,6 +14,7 @@ import soldData from './routers/soldData';
 import workersNumber from './routers/workersCount';
 import partnerNumber from './routers/partnerNumber';
 import clientNames from './routers/clientNameData';
+import phoneTypes from './routers/phoneTypesData';
 
 app.use(bodyParser.json({type:'application/json'}));
 app.use(bodyParser.urlencoded({extended:true}));
@@ -28,6 +29,7 @@ app.use(soldData);
 app.use(workersNumber);
 app.use(partnerNumber);
 app.use(clientNames);
+app.use(phoneTypes);
 
 const server = app.listen(4550, function(){
     const host = server.address().address

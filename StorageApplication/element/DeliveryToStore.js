@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Text, View} from 'react-native';
-import { MaterialCommunityIcons,Feather} from '@expo/vector-icons';
+import { MaterialCommunityIcons} from '@expo/vector-icons';
 import { deliveryCompStyles } from '../styles/element/ondeliveryStyle';
 
 export default class OnDelivery extends Component{
