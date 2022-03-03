@@ -27,6 +27,6 @@ const phoneStyles = StyleSheet.create({
     fontSize:20,
     color:'#fff',
     textAlign:"center"
-  }
+  },
 });
 export {phoneStyles};
