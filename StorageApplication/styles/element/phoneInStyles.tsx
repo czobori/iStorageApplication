@@ -6,12 +6,27 @@ const phoneStyles = StyleSheet.create({
     width:Dimensions.get('window').width - 40,
     padding:15,
     marginTop:15,
+    fontWeight:"bold",
+    opacity:0.80
   },
   title:{
+    //backgroundColor:'#fff',
     fontSize:24,
     fontWeight:"bold",
     textAlign:"center",
-    paddingBottom:10
+    paddingTop:10,
+    marginTop:15,
+    color:'#fff',
   },
+  megjegyzes:{
+    fontSize:14,
+    color:"#fff",
+    textAlign:"center"
+  },
+  today:{
+    fontSize:20,
+    color:'#fff',
+    textAlign:"center"
+  }
 });
 export {phoneStyles};

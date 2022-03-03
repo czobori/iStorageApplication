@@ -17,7 +17,6 @@ export default class Phones extends Component {
   render() {
     return (
       <View style={phoneStyles.div}>
-        <Text style={phoneStyles.title}>Raktáron lévő készülékek</Text>
         <FlatList
           data={this.state.data}
           keyExtractor={(item,index) => index.toString()}
