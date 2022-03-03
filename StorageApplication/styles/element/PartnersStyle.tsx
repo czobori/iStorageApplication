@@ -1,5 +1,5 @@
 import { StyleSheet,Dimensions } from "react-native";
-const partnersCountStyle = StyleSheet.create({
+const partnersStyle = StyleSheet.create({
     div:{
         backgroundColor:'#003247',
         borderRadius:15,
@@ -12,7 +12,8 @@ const partnersCountStyle = StyleSheet.create({
     text:{
         fontSize:18,
         color:'#fff',
-        textAlign:'center'
+        textAlign:'center',
+        paddingBottom:10
     },
     icons:{
         fontSize:32,
@@ -21,6 +22,17 @@ const partnersCountStyle = StyleSheet.create({
     },
     clientnames:{
         color:'#fff'
+    },
+    nevek:{
+        fontSize:16,
+        color:'#fff',
+        textAlign:"left",
+        paddingLeft:25
+    },
+    listicon:{
+        fontSize:14,
+        color:"#fff",
+        paddingRight:10
     }
 })
-export {partnersCountStyle};
+export {partnersStyle};

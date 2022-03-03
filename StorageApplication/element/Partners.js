@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import {Text, View,FlatList} from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
-import { partnersCountStyle } from '../styles/element/PartnerCountStyle';
+import { partnersStyle } from '../styles/element/PartnersStyle';
+import ClientName from './ClientNameList';
 
-export default class PartnersCount extends Component{
+export default class Partners extends Component{
     state={
         ember:0,
         data:[]
@@ -17,9 +18,10 @@ export default class PartnersCount extends Component{
     }
     render(){
         return(
-            <View style={partnersCountStyle.div}>
-                <AntDesign name="contacts" style={partnersCountStyle.icons} />
-                <Text style={partnersCountStyle.text}>{this.state.ember} cégnek szállítunk be jelenleg</Text>
+            <View style={partnersStyle.div}>
+                <AntDesign name="contacts" style={partnersStyle.icons} />
+                <Text style={partnersStyle.text}>{this.state.ember} cégnek szállítunk be jelenleg</Text>
+                <ClientName/>
             </View>
         )
     }
