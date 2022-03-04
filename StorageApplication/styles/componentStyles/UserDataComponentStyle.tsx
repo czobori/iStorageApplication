@@ -27,6 +27,6 @@ const userComponentStyles = StyleSheet.create({
     textAlign:'center',
     fontSize:12,
     color:"#fff"
-},
+  },
 });
 export {userComponentStyles};

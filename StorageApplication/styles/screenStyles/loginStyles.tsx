@@ -33,6 +33,7 @@ const loginPageStyles = StyleSheet.create({
     fontSize:34,
     marginBottom:15,
     fontFamily:"Cochin-Italic",
+    textAlign:"center"
   },
   feher:{
     color:'#fff'
