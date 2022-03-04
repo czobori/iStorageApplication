@@ -7,7 +7,7 @@ const phoneStyles = StyleSheet.create({
     padding:15,
     marginTop:15,
     fontWeight:"bold",
-    opacity:0.80
+    opacity:0.75
   },
   title:{
     //backgroundColor:'#fff',

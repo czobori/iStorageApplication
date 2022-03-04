@@ -15,7 +15,6 @@ const stockComponentStyles = StyleSheet.create({
   },
   rendelt:{
     textAlign:'right',
-    //paddingRight:5
   },
   title:{
     fontSize:24,

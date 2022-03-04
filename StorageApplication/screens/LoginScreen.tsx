@@ -25,12 +25,12 @@ export default function LoginScreen({ navigation }: RootTabScreenProps<'LoginScr
       />
       <Text style={loginPageStyles.istorage}>IStorage</Text>
       <Text style={loginPageStyles.text}>A folytatáshoz kérem jelentkezzen be!</Text>
-      {/*}
+      
       <TextInput style={loginPageStyles.input} 
         placeholder="felhasználónév"  placeholderTextColor="#F4F6F7"/>
       <TextInput style={loginPageStyles.input} 
         placeholder="jelszó" placeholderTextColor="#F4F6F7" secureTextEntry={true}/>
-      */}
+      
       <TouchableOpacity style={loginPageStyles.button}  onPress={onPress}>
           <Text style={loginPageStyles.feher}>Bejelentkezés</Text>
       </TouchableOpacity>

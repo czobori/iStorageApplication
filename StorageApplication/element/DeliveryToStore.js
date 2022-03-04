@@ -18,8 +18,8 @@ export default class OnDelivery extends Component{
         return(
             <View style={deliveryCompStyles.div}>
                 <MaterialCommunityIcons name="truck-fast-outline" style={deliveryCompStyles.icons} />
-                <Text style={deliveryCompStyles.text}>Hamarosan új készülékek érkeznek</Text>
-                <Text style={deliveryCompStyles.text}>({this.state.erkezik} darab)</Text>
+                <Text style={deliveryCompStyles.text}>Érkező készülékek száma {this.state.erkezik} darab</Text>
+                {/*<Text style={deliveryCompStyles.text}>({this.state.erkezik} darab)</Text>*/}
             </View>
         )
     }

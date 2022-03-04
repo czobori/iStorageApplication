@@ -18,8 +18,8 @@ export default class UsersNumber extends Component{
         return(
             <View style={workersCountStyle.div}>
                 <FontAwesome5 name="house-user" style={workersCountStyle.icons} />
-                <Text style={workersCountStyle.text}>A raktárban dolgozók száma</Text>
-                <Text style={workersCountStyle.text}>{this.state.ember} fő (összesen)</Text>
+                <Text style={workersCountStyle.text}>A raktárban dolgozók száma {this.state.ember} fő.</Text>
+                <Text style={workersCountStyle.textinfo}>(Bővebb információ a "Raktárosok" menüponton található)</Text>
             </View>
         )
     }

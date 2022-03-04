@@ -14,10 +14,17 @@ const workersCountStyle = StyleSheet.create({
         color:'#fff',
         textAlign:'center'
     },
+    textinfo:{
+        fontSize:15,
+        color:'#fff',
+        textAlign:'center',
+        paddingHorizontal:10
+    },
     icons:{
         fontSize:28,
         color:'#fff',
-        textAlign:"center"
+        textAlign:"center",
+        paddingBottom:10
     },
 })
 export {workersCountStyle};
