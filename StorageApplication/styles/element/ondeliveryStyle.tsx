@@ -3,7 +3,8 @@ const deliveryCompStyles = StyleSheet.create({
   text:{
     fontSize:18,
     color:'#fff',
-    textAlign:'center'
+    textAlign:'center',
+    paddingHorizontal:10
   },
   icons:{
     fontSize:35,

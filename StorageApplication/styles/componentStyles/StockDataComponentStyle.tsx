@@ -1,7 +1,6 @@
 import { StyleSheet} from 'react-native';
 const stockComponentStyles = StyleSheet.create({
   div:{
-    //backgroundColor: '#003247',
     backgroundColor:'#DCF5FF',
     paddingHorizontal:10,
     paddingVertical:2,
@@ -10,10 +9,10 @@ const stockComponentStyles = StyleSheet.create({
     borderWidth:2,
     borderBottomColor:'#003247'
   },
-  telefonadat:{
+  phonedata:{
     fontWeight: "bold"
   },
-  rendelt:{
+  orderd:{
     textAlign:'right',
   },
   title:{
@@ -23,7 +22,7 @@ const stockComponentStyles = StyleSheet.create({
     color:'#fff',
     marginTop:15
   },
-  megjegyzes:{
+  remark:{
     textAlign:"center",
     color:'#fff'
   }

@@ -14,7 +14,7 @@ export default function PhoneHereScreen({ navigation }: RootTabScreenProps<'Phon
         <LinearGradient colors={['rgba(0,0,0,0.8)', 'transparent']} style={containerStyles.background}/>
         <ScrollView showsHorizontalScrollIndicator={false}>
             <Text style={phoneStyles.title}>Raktáron lévő készülékek</Text>
-            <Text style={phoneStyles.megjegyzes}>Különböző kapacitással és színnel</Text>
+            <Text style={phoneStyles.remark}>Különböző kapacitással és színnel</Text>
             <Text style={phoneStyles.today}>{Moment(today).format('YYYY.MM.DD')}</Text>
             <Phones/>
         </ScrollView>

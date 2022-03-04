@@ -23,7 +23,7 @@ const partnersStyle = StyleSheet.create({
     clientnames:{
         color:'#fff'
     },
-    nevek:{
+    names:{
         fontSize:16,
         color:'#fff',
         textAlign:"left",

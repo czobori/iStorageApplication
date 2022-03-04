@@ -9,12 +9,10 @@ const userComponentStyles = StyleSheet.create({
     opacity:0.80
   },
   text:{
-    //color:'#1e2833',
     color:'#fff',
     paddingLeft:15,
   },
-  nevek:{
-   // color:'#1e2833',
+  names:{
     color:'#fff',
     fontWeight: "bold",
     textAlign:"center",
@@ -23,7 +21,6 @@ const userComponentStyles = StyleSheet.create({
   },
   icons:{
     fontSize:15,
-    //color:'#1e2833',
     color:'#fff',
   }
 });

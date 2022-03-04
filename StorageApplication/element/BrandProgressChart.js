@@ -38,8 +38,8 @@ export default class ChartBrand extends Component {
 
     return (
       <View style={homePageStyles.div}>
-        <Text style={homePageStyles.cim}>Márkák a raktárban</Text>
-        <Text style={homePageStyles.informacio}>(a körből kifelé haladva, a magarázatnál fentről lefelé)</Text>
+        <Text style={homePageStyles.title}>Márkák a raktárban</Text>
+        <Text style={homePageStyles.info}>(a körből kifelé haladva, a magarázatnál fentről lefelé)</Text>
         <ProgressChart
           data={data}
           width={Dimensions.get('window').width-70 }
@@ -47,7 +47,6 @@ export default class ChartBrand extends Component {
           chartConfig={progressCartConfig}
           style={{borderRadius: 16}}
           strokeWidth= {11}
-        
         />
       </View>
     )

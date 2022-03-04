@@ -10,23 +10,23 @@ const soldsComponentStyles = StyleSheet.create({
     borderWidth:2,
     borderBottomColor:'#003247'
   },
-  telefonadat:{
+  phonedata:{
     fontWeight: "bold"
   },
-  eladottszov:{
+  soldstext:{
     fontSize:24,
     fontWeight:"bold",
     textAlign:"center",
     color:'#fff',
     marginTop:15
   },
-  akthonap:{
+  actualmonth:{
     textAlign:"center",
     marginBottom:10,
     color:'#fff',
     fontSize:20
   },
-  adat:{
+  data:{
     textAlign:"right",
   }
 });

@@ -10,7 +10,6 @@ const phoneStyles = StyleSheet.create({
     opacity:0.75
   },
   title:{
-    //backgroundColor:'#fff',
     fontSize:24,
     fontWeight:"bold",
     textAlign:"center",
@@ -18,7 +17,7 @@ const phoneStyles = StyleSheet.create({
     marginTop:15,
     color:'#fff',
   },
-  megjegyzes:{
+  remark:{
     fontSize:14,
     color:"#fff",
     textAlign:"center"

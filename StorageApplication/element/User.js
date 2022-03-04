@@ -23,7 +23,7 @@ export default class User extends Component {
           keyExtractor={(item,index) => index.toString()}
           renderItem={({item}) =>
             <View style={userComponentStyles.div}>
-              <Text style={userComponentStyles.nevek}>{item.full_name}</Text>
+              <Text style={userComponentStyles.names}>{item.full_name}</Text>
               <Text style={userComponentStyles.text}><AntDesign name="user" style={userComponentStyles.icons} /> {item.username}</Text>
               <Text style={userComponentStyles.text}><Entypo name="mail" style={userComponentStyles.icons} /> {item.email}</Text>
               <Text style={userComponentStyles.text}><Entypo name="old-phone" style={userComponentStyles.icons} /> {item.phone_number}</Text>

@@ -6,14 +6,14 @@ import { soldsComponentStyles } from '../styles/componentStyles/SoldsDataCompone
 export default class SoldsThisMonth extends Component {
   state ={
     data:[],
-    idotartam:""
+    yearMonth:""
   }
 
   fetchData= async()=>{
     const response = await fetch('http://localhost:4550/sold');
     const solds = await response.json();
     this.setState({data: solds});
-    this.setState({idotartam: solds[0].date});
+    this.setState({yearMonth: solds[0].date});
 
   }
   componentDidMount(){
@@ -24,15 +24,15 @@ export default class SoldsThisMonth extends Component {
     Moment.locale('hu');
     return (
       <View>
-        <Text style={soldsComponentStyles.eladottszov}>ELADOTT TERMÉKEK</Text>
-        <Text style={soldsComponentStyles.akthonap}>{Moment(this.state.idotartam).format('YYYY.MMMM')}</Text>
+        <Text style={soldsComponentStyles.soldstext}>ELADOTT TERMÉKEK</Text>
+        <Text style={soldsComponentStyles.actualmonth}>{Moment(this.state.yearMonth).format('YYYY.MMMM')}</Text>
         <FlatList
           data={this.state.data}
           keyExtractor={(item,index) => index.toString()}
           renderItem={({item}) =>
             <View style={soldsComponentStyles.div}>
-              <Text style={soldsComponentStyles.adat}>{item.client_name} - {Moment(item.date).format('YYYY.MM.DD HH:mm')}</Text>
-              <Text style={soldsComponentStyles.telefonadat}>{(item.brand_name).toUpperCase()} {(item.model_name).toUpperCase()} {item.phone_color} {item.capacity}GB ({item.amount} db)</Text>
+              <Text style={soldsComponentStyles.data}>{item.client_name} - {Moment(item.date).format('YYYY.MM.DD HH:mm')}</Text>
+              <Text style={soldsComponentStyles.phonedata}>{(item.brand_name).toUpperCase()} {(item.model_name).toUpperCase()} {item.phone_color} {item.capacity}GB ({item.amount} db)</Text>
             </View>
           }  
         />

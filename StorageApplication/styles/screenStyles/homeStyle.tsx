@@ -1,10 +1,10 @@
 import { StyleSheet,Dimensions} from 'react-native';
 const homePageStyles = StyleSheet.create({
-    cim:{
+    title:{
         textAlign:'center',
         fontSize:24
     },
-    informacio:{
+    info:{
         textAlign:'center',
         fontSize:12
     },

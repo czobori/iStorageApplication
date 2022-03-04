@@ -10,5 +10,4 @@ export const progressCartConfig ={
     },
     barPercentage: 1,
     useShadowColorFromDataset: false,
-    
 };

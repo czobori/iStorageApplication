@@ -9,7 +9,7 @@ const warehouseStyle = StyleSheet.create({
         textAlign:"center",
         color:"#1e2833"
     },
-    nev:{
+    name:{
         fontSize:26
     }
 });

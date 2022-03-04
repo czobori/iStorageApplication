@@ -4,23 +4,23 @@ import * as Progress from 'react-native-progress';
 import { warehousefullStyle } from '../styles/element/progressbarStyle';
 export default class WarehouseSaturation extends Component{
     state ={
-        szam:0,
+        num:0,
     }
     
     fetchData= async()=>{
         const currently = await (await fetch ('http://localhost:4550/currentlyInStock')).json();
-        this.setState({szam:currently.number/5000});
+        this.setState({num:currently.number/5000});
     }
     componentDidMount(){
         this.fetchData();
     }
     
     render(){
-        const szazalekkerekitve = Math.round((this.state.szam*100)*100)/100;
+        const szazalekkerekitve = Math.round((this.state.num*100)*100)/100;
         return(
             <View style={warehousefullStyle.div}>
                 <Text style={warehousefullStyle.text}>Raktár teltsége: {szazalekkerekitve}%</Text>
-                <Progress.Bar progress={this.state.szam} width={Dimensions.get('window').width - 100} style={warehousefullStyle.bar} />
+                <Progress.Bar progress={this.state.num} width={Dimensions.get('window').width - 100} style={warehousefullStyle.bar} />
             </View>
         )
     }

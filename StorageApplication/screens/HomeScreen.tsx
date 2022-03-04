@@ -13,10 +13,7 @@ import Partners from '../element/Partners';
 export default function HomeScreen({ navigation }: RootTabScreenProps<'HomeScreen'>) {
   return(
     <View style={containerStyles.container}>
-      <LinearGradient
-        colors={['rgba(0,0,0,0.8)', 'transparent']}
-        style={containerStyles.background}
-      />
+      <LinearGradient colors={['rgba(0,0,0,0.8)', 'transparent']} style={containerStyles.background}/>
       <ScrollView showsHorizontalScrollIndicator={false}>
         <Warehouse/>
         <WarehouseSaturation/>

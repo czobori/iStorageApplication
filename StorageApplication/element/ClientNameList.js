@@ -24,7 +24,7 @@ export default class ClientName extends Component {
           keyExtractor={(item,index) => index.toString()}
           renderItem={({item}) =>
             <View>
-              <Text style={partnersStyle.nevek}><AntDesign name="rightcircle" style={partnersStyle.listicon} />{item.client_name}</Text>
+              <Text style={partnersStyle.names}><AntDesign name="rightcircle" style={partnersStyle.listicon} />{item.client_name}</Text>
             </View>
           }  
         />
