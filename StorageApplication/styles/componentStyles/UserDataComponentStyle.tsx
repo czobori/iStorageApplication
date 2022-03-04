@@ -20,8 +20,13 @@ const userComponentStyles = StyleSheet.create({
     fontSize:16
   },
   icons:{
-    fontSize:15,
+    fontSize:12,
     color:'#fff',
-  }
+  },
+  info:{
+    textAlign:'center',
+    fontSize:12,
+    color:"#fff"
+},
 });
 export {userComponentStyles};

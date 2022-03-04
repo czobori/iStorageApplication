@@ -5,11 +5,11 @@ import { deliveryCompStyles } from '../styles/element/ondeliveryStyle';
 
 export default class OnDelivery extends Component{
     state ={
-        erkezik:0
+        come:0
     }
     fetchData= async()=>{
         const darab = await (await fetch ('http://localhost:4550/deliveryToStorage')).json();
-        this.setState({erkezik:darab.raktarbaJon});
+        this.setState({come:darab.raktarbaJon});
     }
     componentDidMount(){
         this.fetchData();
@@ -18,7 +18,8 @@ export default class OnDelivery extends Component{
         return(
             <View style={deliveryCompStyles.div}>
                 <MaterialCommunityIcons name="truck-fast-outline" style={deliveryCompStyles.icons} />
-                <Text style={deliveryCompStyles.text}>A raktárba érkező készülékek száma {this.state.erkezik} darab</Text>
+                <Text style={deliveryCompStyles.text}>Beérkező készülékek száma {this.state.come} db</Text>
+                <Text style={deliveryCompStyles.info}>Bővebb információ a "Beérkező" menüpontban található</Text>
             </View>
         )
     }

@@ -39,7 +39,8 @@ export default class ChartBrand extends Component {
     return (
       <View style={homePageStyles.div}>
         <Text style={homePageStyles.title}>Márkák a raktárban</Text>
-        <Text style={homePageStyles.info}>(a körből kifelé haladva, a magarázatnál fentről lefelé)</Text>
+        <Text style={homePageStyles.info}>(A diagram belülről kifelé, a magyarázat pfentről lefelé)</Text>
+        <Text style={homePageStyles.info}>Bővebb információ a "Raktáron" menüpontban található</Text>
         <ProgressChart
           data={data}
           width={Dimensions.get('window').width-70 }

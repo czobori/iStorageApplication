@@ -18,6 +18,11 @@ const deliveryCompStyles = StyleSheet.create({
     paddingBottom:10,
     paddingTop:10,
     marginTop:15
-  }
+  },
+  info:{
+    textAlign:'center',
+    fontSize:12,
+    color:"#fff"
+},
 });
 export {deliveryCompStyles};

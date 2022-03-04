@@ -15,7 +15,7 @@ const workersCountStyle = StyleSheet.create({
         textAlign:'center'
     },
     textinfo:{
-        fontSize:15,
+        fontSize:12,
         color:'#fff',
         textAlign:'center',
         paddingHorizontal:10
