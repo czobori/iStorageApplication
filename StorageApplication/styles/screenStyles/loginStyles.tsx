@@ -23,6 +23,7 @@ const loginPageStyles = StyleSheet.create({
     borderWidth:1,
     padding:5,
     width:Dimensions.get('window').width - 100,
+    maxWidth:350,
     textAlign: 'center',
     borderColor:'#FDFEFE',
     borderRadius:15,

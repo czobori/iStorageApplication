@@ -33,8 +33,8 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 function RootNavigator() {
   return (
     <Stack.Navigator>
-      {/*alapból a login scrren latszik csak*/}
-      <Stack.Screen name="Root" component={LoginScreen} options={{ headerShown: false }} />
+      {/*alapból a login scrren latszik csak - eredetileg BottomTaabNavigator*/}
+      <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="Info" component={InfoScreen} />
@@ -52,7 +52,7 @@ function BottomTabNavigator() {
     <BottomTab.Navigator
       initialRouteName="LoginScreen"
       screenOptions={{tabBarActiveTintColor: Colors[colorScheme].tint,}}>
-      {/*<BottomTab.Screen
+      <BottomTab.Screen
         name="LoginScreen" component={LoginScreen}
         options={({ navigation }: RootTabScreenProps<'LoginScreen'>) => ({
           title: 'Bejelentkezés',
@@ -65,7 +65,7 @@ function BottomTabNavigator() {
             </Pressable>
           ),
         })}
-      />*/}
+      />
       <BottomTab.Screen
         name="HomeScreen" component={HomeScreen}
         options={({ navigation }: RootTabScreenProps<'HomeScreen'>) => ({
