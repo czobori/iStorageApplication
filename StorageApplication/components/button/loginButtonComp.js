@@ -1,13 +1,13 @@
-import {TextInput,TouchableOpacity,Alert,Button,SafeAreaView,Text,View } from 'react-native';
+import {Text,View,Pressable } from 'react-native';
 import { loginPageStyles } from '../../styles/screenStyles/loginStyles';
 import React from 'react';
 
-const LoginButton = () =>{
+const LoginButton = ({onPress}) =>{
     return (
         <View>
-            <TouchableOpacity style={loginPageStyles.button}>
+            <Pressable onPress={onPress} style={loginPageStyles.button}>
                 <Text style={loginPageStyles.feher}>Bejelentkezés</Text>
-            </TouchableOpacity>
+            </Pressable>
         </View>
     )
 }

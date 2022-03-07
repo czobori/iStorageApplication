@@ -2,12 +2,13 @@ import {TextInput,TouchableOpacity,Alert,Button,SafeAreaView,Text,View } from 'r
 import { loginPageStyles } from '../../styles/screenStyles/loginStyles';
 import React from 'react';
 
-const UsernameInput = () =>{
+const UserInput = ({value,setValue,placeholder,secureTextEntry}) =>{
     return (
         <View>
-             <TextInput style={loginPageStyles.input} 
-        placeholder="felhasználónév"  placeholderTextColor="#F4F6F7"/>
+            <TextInput style={loginPageStyles.input} 
+                value = {value} onChangeText = {setValue}  secureTextEntry={secureTextEntry}
+                placeholder={placeholder} placeholderTextColor="#F4F6F7"/>
         </View>
     )
 }
-export default UsernameInput;
+export default UserInput;

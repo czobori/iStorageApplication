@@ -37,6 +37,11 @@ const linking: LinkingOptions<RootStackParamList> = {
             screens:{
               PhoneHereScreen: 'phoneHere',
             }
+          },
+          LogoutScreen:{
+            screens:{
+              LogoutScreen: 'logout'
+            }
           }
         },
       },

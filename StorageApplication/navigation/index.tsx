@@ -15,15 +15,14 @@ import HomeScreen from '../screens/HomeScreen';
 import OrderInScreen from '../screens/OrderInScreen';
 import OrderOutScreen from '../screens/OrderOutScreen';
 import PhoneHereScreen from '../screens/PhoneHereScreen';
+import LogoutScreen from '../screens/LogoutScreen copy';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 import { FontAwesome5,MaterialCommunityIcons,Entypo,Fontisto,MaterialIcons} from '@expo/vector-icons';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
-    <NavigationContainer
-      linking={LinkingConfiguration}
-      theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+    <NavigationContainer linking={LinkingConfiguration} theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <RootNavigator />
     </NavigationContainer>
   );
@@ -34,7 +33,8 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 function RootNavigator() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
+      {/*alapból a login scrren latszik csak*/}
+      <Stack.Screen name="Root" component={LoginScreen} options={{ headerShown: false }} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="Info" component={InfoScreen} />
@@ -52,12 +52,11 @@ function BottomTabNavigator() {
     <BottomTab.Navigator
       initialRouteName="LoginScreen"
       screenOptions={{tabBarActiveTintColor: Colors[colorScheme].tint,}}>
-      <BottomTab.Screen
-        name="LoginScreen"
-        component={LoginScreen}
+      {/*<BottomTab.Screen
+        name="LoginScreen" component={LoginScreen}
         options={({ navigation }: RootTabScreenProps<'LoginScreen'>) => ({
           title: 'Bejelentkezés',
-          tabBarIcon: ({ color }) => <Entypo name="login" size={24} color="#1e2833" />,
+          tabBarIcon: ({ }) => <Entypo name="login" size={24} color="#1e2833" />,
           headerRight: () => (
             <Pressable
               onPress={() => navigation.navigate('Info')}
@@ -66,56 +65,57 @@ function BottomTabNavigator() {
             </Pressable>
           ),
         })}
-      />
+      />*/}
       <BottomTab.Screen
-        name="HomeScreen"
-        component={HomeScreen}
+        name="HomeScreen" component={HomeScreen}
         options={({ navigation }: RootTabScreenProps<'HomeScreen'>) => ({
           title: 'Statisztikák',
           tabBarIcon: ({ color }) => <MaterialIcons name="storage" size={27} color="#1e2833" />,
         })}
       />
       <BottomTab.Screen
-        name="OrderInScreen"
-        component={OrderInScreen}
+        name="OrderInScreen" component={OrderInScreen}
         options={({ navigation }: RootTabScreenProps<'OrderInScreen'>) => ({
           title: 'Beérkező',
           tabBarIcon: ({ color }) => <Fontisto name="truck" size={24} color="#1e2833" />,
         })}
       />
       <BottomTab.Screen
-        name="PhoneHereScreen"
-        component={PhoneHereScreen}
+        name="PhoneHereScreen" component={PhoneHereScreen}
         options={({ navigation }: RootTabScreenProps<'PhoneHereScreen'>) => ({
           title: 'Raktáron',
           tabBarIcon: ({ color }) => <FontAwesome name="inbox" size={26} color="#1e2833" />,
         })}
       />
       <BottomTab.Screen
-        name="OrderOutScreen"
-        component={OrderOutScreen}
+        name="OrderOutScreen" component={OrderOutScreen}
         options={({ navigation }: RootTabScreenProps<'OrderOutScreen'>) => ({
           title: 'Kimenő',
           tabBarIcon: ({ color }) => <MaterialCommunityIcons name="truck-check-outline" size={29} color="#1e2833" />,
         })}
       />
       <BottomTab.Screen
-        name="UsersScreen"
-        component={UsersScreen}
+        name="UsersScreen" component={UsersScreen}
         options={({ navigation }: RootTabScreenProps<'UsersScreen'>) => ({
           title: 'Raktárosok',
           tabBarIcon: ({ color }) => <FontAwesome5 name="users" size={24} color="#1e2833" />,
+        })}
+      />
+      <BottomTab.Screen
+        name="LogoutScreen" component={LogoutScreen}
+        options={({ navigation }: RootTabScreenProps<'LogoutScreen'>) => ({
+          title: 'Kijelentkezés',
+          tabBarIcon: ({ color }) => <Entypo name="log-out" size={24} color="#1e2833" />,
         })}
       />
     </BottomTab.Navigator>
     
   );
 }
-
 /** You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/  */
 function TabBarIcon(props: {
   name: React.ComponentProps<typeof FontAwesome>['name'];
   color: string;
 }){
-  return <FontAwesome size={30} style={{ marginBottom: -3 }} {...props} />;
+  return <FontAwesome size={30} style={{ marginBottom: -3}} {...props} />;
 }
