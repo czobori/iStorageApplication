@@ -6,14 +6,14 @@ import ChartBrand from '../element/BrandProgressChart';
 import OnDelivery from '../element/DeliveryToStore';
 import Warehouse from '../element/WarehouseData';
 import { ScrollView } from 'react-native-gesture-handler';
-import { LinearGradient } from 'expo-linear-gradient';
 import UsersNumber from '../element/WorkersNumber';
 import Partners from '../element/Partners';
+import GradientBack from '../components/linegradient/linegradent';
 
 export default function HomeScreen({ navigation }: RootTabScreenProps<'HomeScreen'>) {
   return(
     <View style={containerStyles.container}>
-      <LinearGradient colors={['rgba(0,0,0,0.8)', 'transparent']} style={containerStyles.background}/>
+     <GradientBack/>
       <ScrollView showsHorizontalScrollIndicator={false}>
         <Warehouse/>
         <WarehouseSaturation/>
