@@ -7,7 +7,7 @@ const phoneStyles = StyleSheet.create({
     padding:15,
     marginTop:15,
     fontWeight:"bold",
-    opacity:0.85,
+    //opacity:0.85,
     alignItems:"center"
   },
   title:{
@@ -31,7 +31,7 @@ const phoneStyles = StyleSheet.create({
     padding:5,
     paddingLeft:15,
     width:Dimensions.get('window').width - 60,
-    backgroundColor:"#1e2833",
+    backgroundColor:"#003247",
     borderColor:"#fff",
     borderRadius:15,
     marginVertical:2

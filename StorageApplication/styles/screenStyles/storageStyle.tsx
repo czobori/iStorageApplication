@@ -5,7 +5,7 @@ const storagePageStyles = StyleSheet.create({
     borderWidth:2,
     borderColor:"#1e2833",
     marginHorizontal:10,
-    marginTop:20,
+    marginTop:15,
     padding:10,
     borderRadius:15,
     alignItems:"center"
@@ -16,8 +16,13 @@ const storagePageStyles = StyleSheet.create({
     fontWeight:"bold",
   },
   icon:{
-      fontSize:50,
-      color:"#1e2833"
+    fontSize:50,
+    color:"#1e2833"
+  },
+  title:{
+    color:"#000",
+    fontWeight:"bold",
+    fontSize:26
   }
 });
 export {storagePageStyles};

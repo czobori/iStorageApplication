@@ -6,7 +6,6 @@ const userComponentStyles = StyleSheet.create({
     margin:10,
     borderRadius:15,
     paddingRight:20,
-    opacity:0.80
   },
   text:{
     color:'#fff',

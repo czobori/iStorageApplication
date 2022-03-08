@@ -7,9 +7,9 @@ const ArriveButton = ({onPress}) =>{
     return (
         <View>
             <Pressable style={storagePageStyles.button} onPress={onPress}>
-                    <Fontisto name="truck"style={storagePageStyles.icon} />
-                    <Text style={storagePageStyles.text}>Beérkező</Text>
-                </Pressable>
+                <Fontisto name="truck"style={storagePageStyles.icon} />
+                <Text style={storagePageStyles.text}>Beérkező</Text>
+            </Pressable>
         </View>
     )
 }

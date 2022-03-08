@@ -12,7 +12,6 @@ export default function OrderOutScreen({ navigation }: RootTabScreenProps<'Order
   return(
     <View style={containerStyles.container}>
       <GradientBack/>
-     
       <ScrollView showsHorizontalScrollIndicator={false}>
         <BackButton onPress={onBackPressed}/>
         <SoldsThisMonth/>

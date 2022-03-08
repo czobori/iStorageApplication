@@ -4,7 +4,6 @@ import { containerStyles } from '../styles/element/containerStyle';
 import { ScrollView } from 'react-native-gesture-handler';
 import GradientBack from '../components/linegradient/linegradent';
 import {Text,View,Pressable } from 'react-native';
-import { FontAwesome5,MaterialCommunityIcons,Entypo,Fontisto,MaterialIcons,FontAwesome} from '@expo/vector-icons';
 import { storagePageStyles } from '../styles/screenStyles/storageStyle';
 import ArriveButton from '../components/button/arriveButtonComp';
 import InButton from '../components/button/instoreageButtonComp';
@@ -20,6 +19,7 @@ export default function UsersScreen({ navigation }: RootTabScreenProps<'UsersScr
     return(
         <View style={containerStyles.container}>
             <GradientBack/>
+            <Text style={storagePageStyles.title}>Készülékek</Text>
             <View  style={{ flexDirection: 'row'}}>
                 <ArriveButton onPress={onArrive}/>
                 <InButton onPress={onInstore}/>
