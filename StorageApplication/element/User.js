@@ -18,8 +18,7 @@ export default class User extends Component {
   render() {
     return (
       <View>
-        <FlatList
-          data={this.state.data}
+        <FlatList data={this.state.data}
           keyExtractor={(item,index) => index.toString()}
           renderItem={({item}) =>
             <View style={userComponentStyles.div}>

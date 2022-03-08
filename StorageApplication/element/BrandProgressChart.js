@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import {Text, View,Dimensions} from 'react-native';
+import {View,Dimensions} from 'react-native';
 import {ProgressChart} from 'react-native-chart-kit'
 import { progressCartConfig } from '../const/ChartKitConfig';
 import { homePageStyles } from '../styles/screenStyles/homeStyle';
+import BrandInfoText from '../components/texts/BrandProgressInfoTextCom';
 export default class ChartBrand extends Component {
 
   state ={
@@ -38,16 +39,11 @@ export default class ChartBrand extends Component {
 
     return (
       <View style={homePageStyles.div}>
-        <Text style={homePageStyles.title}>Márkák a raktárban</Text>
-        <Text style={homePageStyles.info}>(A diagram belülről kifelé, a magyarázat pfentről lefelé)</Text>
-        <Text style={homePageStyles.info}>Bővebb információ a "Raktáron" menüpontban található</Text>
-        <ProgressChart
-          data={data}
-          width={Dimensions.get('window').width-70 }
-          height={180}
+        <BrandInfoText/>
+        <ProgressChart data={data}
+          width={Dimensions.get('window').width-70 } height={180}
           chartConfig={progressCartConfig}
-          style={{borderRadius: 16}}
-          strokeWidth= {11}
+          style={{borderRadius: 16}} strokeWidth= {11}
         />
       </View>
     )

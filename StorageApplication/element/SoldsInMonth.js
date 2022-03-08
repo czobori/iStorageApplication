@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Text, View,FlatList} from 'react-native';
 import Moment from 'moment';
 import { soldsComponentStyles } from '../styles/componentStyles/SoldsDataComponent';
+import SoldInMonthText from '../components/texts/SoldInMonthTextComp';
 
 export default class SoldsThisMonth extends Component {
   state ={
@@ -24,10 +25,8 @@ export default class SoldsThisMonth extends Component {
     Moment.locale('hu');
     return (
       <View>
-        <Text style={soldsComponentStyles.soldstext}>ELADOTT TERMÉKEK</Text>
-        <Text style={soldsComponentStyles.actualmonth}>{Moment(this.state.yearMonth).format('YYYY.MMMM')}</Text>
-        <FlatList
-          data={this.state.data}
+        <SoldInMonthText/>
+        <FlatList data={this.state.data}
           keyExtractor={(item,index) => index.toString()}
           renderItem={({item}) =>
             <View style={soldsComponentStyles.div}>

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Text, View,FlatList} from 'react-native';
 import { stockComponentStyles } from '../styles/componentStyles/StockDataComponentStyle';
 import Moment from 'moment';
+import OrderInText from '../components/texts/OrderInTextComp';
 
 export default class Stocks extends Component {
   state ={
@@ -22,8 +23,7 @@ export default class Stocks extends Component {
     Moment.locale('en');
     return (
       <View>
-        <Text style={stockComponentStyles.title}>Berendelt készülékek</Text>
-        <Text style={stockComponentStyles.remark}>(hamarosan érkeznek)</Text>
+        <OrderInText/>
         <FlatList
           data={this.state.data}
           keyExtractor={(item,index) => index.toString()}

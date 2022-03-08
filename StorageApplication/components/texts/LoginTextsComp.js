@@ -1,4 +1,4 @@
-import {TextInput,TouchableOpacity,Alert,Button,SafeAreaView,Text,View } from 'react-native';
+import {Text,View } from 'react-native';
 import { loginPageStyles } from '../../styles/screenStyles/loginStyles';
 import React from 'react';
 
