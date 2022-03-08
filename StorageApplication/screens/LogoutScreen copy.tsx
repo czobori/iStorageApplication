@@ -8,10 +8,7 @@ import GradientBack from '../components/linegradient/linegradent';
 
 
 export default function LogoutScreen({ navigation }: RootTabScreenProps<'LogoutScreen'>) {
-  const onLogoutPressed = () =>{
-    console.log("Logout");
-    navigation.navigate("LoginScreen");
-  }
+  const onLogoutPressed = () =>{navigation.navigate("LoginScreen");}
   return (
     <View style={containerStyles.container}>
       <GradientBack/>

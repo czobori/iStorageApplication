@@ -18,7 +18,6 @@ const soldsComponentStyles = StyleSheet.create({
     fontWeight:"bold",
     textAlign:"center",
     color:'#fff',
-    marginTop:15
   },
   actualmonth:{
     textAlign:"center",

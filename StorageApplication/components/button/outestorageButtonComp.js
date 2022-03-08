@@ -1,8 +1,7 @@
 import {Text,View,Pressable } from 'react-native';
-import { loginPageStyles } from '../../styles/screenStyles/loginStyles';
 import React from 'react';
 import { storagePageStyles } from '../../styles/screenStyles/storageStyle';
-import { FontAwesome5,MaterialCommunityIcons,Entypo,Fontisto,MaterialIcons,FontAwesome} from '@expo/vector-icons';
+import { MaterialCommunityIcons} from '@expo/vector-icons';
 
 const OutButton = ({onPress}) =>{
     return (

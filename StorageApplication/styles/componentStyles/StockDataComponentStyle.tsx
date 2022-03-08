@@ -20,7 +20,7 @@ const stockComponentStyles = StyleSheet.create({
     fontWeight:"bold",
     textAlign:"center",
     color:'#fff',
-    marginTop:15
+    //marginTop:15
   },
   remark:{
     textAlign:"center",

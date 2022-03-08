@@ -13,17 +13,9 @@ import OutButton from '../components/button/outestorageButtonComp';
 
 export default function UsersScreen({ navigation }: RootTabScreenProps<'UsersScreen'>) {
 
-    const onArrive = () =>{
-        navigation.navigate("OrderInScreen");
-    }
-
-    const onInstore = () =>{
-        navigation.navigate("PhoneHereScreen");
-    }
-
-    const onSent = () =>{
-        navigation.navigate("OrderOutScreen");
-    }
+    const onArrive = () =>{navigation.navigate("OrderInScreen");}
+    const onInstore = () =>{navigation.navigate("PhoneHereScreen");}
+    const onSent = () =>{navigation.navigate("OrderOutScreen");}
 
     return(
         <View style={containerStyles.container}>

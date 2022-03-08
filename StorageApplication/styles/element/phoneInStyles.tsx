@@ -14,8 +14,6 @@ const phoneStyles = StyleSheet.create({
     fontSize:24,
     fontWeight:"bold",
     textAlign:"center",
-    paddingTop:10,
-    marginTop:15,
     color:'#fff',
   },
   remark:{

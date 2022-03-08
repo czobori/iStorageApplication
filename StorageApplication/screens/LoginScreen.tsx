@@ -11,10 +11,7 @@ export default function LoginScreen({ navigation }: RootTabScreenProps<'LoginScr
   const [username,setUsername] = useState('');
   const [password,setPassword] = useState('');
 
-  const onLoginPressed = () =>{
-    console.log("Login");
-    navigation.navigate("HomeScreen");
-  }
+  const onLoginPressed = () =>{navigation.navigate("HomeScreen");}
 
   return (
     <View style={containerStyles.container}>
