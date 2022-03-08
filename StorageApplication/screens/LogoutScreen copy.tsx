@@ -10,11 +10,15 @@ import LogoutText from '../components/texts/LogoutTextsComp';
 
 
 export default function LogoutScreen({ navigation }: RootTabScreenProps<'LogoutScreen'>) {
+  const onLogoutPressed = () =>{
+    console.log("Logout");
+    navigation.navigate("LoginScreen");
+  }
   return (
     <View style={containerStyles.container}>
       <LinearGradient colors={['rgba(0,0,0,0.8)', 'transparent']} style={containerStyles.background}/>
       <LogoutText/>
-      <LogoutButton/>
+      <LogoutButton onPress={onLogoutPressed}/>
     </View>
   );
 }

@@ -1,15 +1,14 @@
-import {Alert,Pressable} from 'react-native';
 import { View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 import { containerStyles } from '../styles/element/containerStyle';
-import { loginPageStyles } from '../styles/screenStyles/loginStyles';
 import React, {useState} from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
 import UserInput from '../components/input/usernameInputComp';
 import LoginButton from '../components/button/loginButtonComp';
 import LoginText from '../components/texts/LoginTextsComp';
-import HomeScreen from './HomeScreen';
-
+import Navigation from '../navigation';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
 export default function LoginScreen({ navigation }: RootTabScreenProps<'LoginScreen'>) {
@@ -18,7 +17,7 @@ export default function LoginScreen({ navigation }: RootTabScreenProps<'LoginScr
 
   const onLoginPressed = () =>{
     console.log("Login");
- 
+    navigation.navigate("HomeScreen");
   }
 
   return (
@@ -31,3 +30,4 @@ export default function LoginScreen({ navigation }: RootTabScreenProps<'LoginScr
     </View>
   );
 }
+

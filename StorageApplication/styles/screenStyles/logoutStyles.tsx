@@ -11,7 +11,7 @@ const logoutPageStyles = StyleSheet.create({
     borderColor:'#fff'
   },
   text: {
-    fontSize:18,
+    fontSize:16,
     marginTop:10,
     marginBottom:10,
     textAlign:'center',
