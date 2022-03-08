@@ -7,7 +7,8 @@ const phoneStyles = StyleSheet.create({
     padding:15,
     marginTop:15,
     fontWeight:"bold",
-    opacity:0.75
+    opacity:0.85,
+    alignItems:"center"
   },
   title:{
     fontSize:24,
@@ -27,5 +28,18 @@ const phoneStyles = StyleSheet.create({
     color:'#fff',
     textAlign:"center"
   },
+  rows:{
+    borderWidth:1,
+    padding:5,
+    paddingLeft:15,
+    width:Dimensions.get('window').width - 60,
+    backgroundColor:"#1e2833",
+    borderColor:"#fff",
+    borderRadius:15,
+    marginVertical:2
+  },
+  data:{
+    color:"#fff"
+  }
 });
 export {phoneStyles};

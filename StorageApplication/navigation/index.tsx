@@ -7,6 +7,7 @@ import { ColorSchemeName, Pressable} from 'react-native';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
+
 import InfoScreen from '../screens/InfoScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import LoginScreen from '../screens/LoginScreen';
@@ -16,10 +17,13 @@ import OrderInScreen from '../screens/OrderInScreen';
 import OrderOutScreen from '../screens/OrderOutScreen';
 import PhoneHereScreen from '../screens/PhoneHereScreen';
 import LogoutScreen from '../screens/LogoutScreen copy';
+import StorageScreen from '../screens/StorageScreen';
+
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
-import { FontAwesome5,MaterialCommunityIcons,Entypo,Fontisto,MaterialIcons} from '@expo/vector-icons';
+import { FontAwesome5,MaterialCommunityIcons,Entypo,Fontisto,MaterialIcons,AntDesign } from '@expo/vector-icons';
 
+import { Text } from '../components/Themed';
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
     <NavigationContainer linking={LinkingConfiguration} theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
@@ -78,13 +82,22 @@ function BottomTabNavigator() {
       <BottomTab.Screen
         name="OrderInScreen" component={OrderInScreen}
         options={({ navigation }: RootTabScreenProps<'OrderInScreen'>) => ({
+          tabBarButton: () => null,
           title: 'Beérkező',
           tabBarIcon: ({ color }) => <Fontisto name="truck" size={24} color="#1e2833" />,
         })}
       />
       <BottomTab.Screen
+        name="StorageScreen" component={StorageScreen}
+        options={({ navigation }: RootTabScreenProps<'StorageScreen'>) => ({
+          title: 'Raktár',
+          tabBarIcon: ({ color }) => <FontAwesome name="inbox" size={26} color="#1e2833" />,
+        })}
+      />
+      <BottomTab.Screen
         name="PhoneHereScreen" component={PhoneHereScreen}
         options={({ navigation }: RootTabScreenProps<'PhoneHereScreen'>) => ({
+          tabBarButton: () => null,
           title: 'Raktáron',
           tabBarIcon: ({ color }) => <FontAwesome name="inbox" size={26} color="#1e2833" />,
         })}
@@ -92,6 +105,7 @@ function BottomTabNavigator() {
       <BottomTab.Screen
         name="OrderOutScreen" component={OrderOutScreen}
         options={({ navigation }: RootTabScreenProps<'OrderOutScreen'>) => ({
+          tabBarButton: () => null,
           title: 'Kimenő',
           tabBarIcon: ({ color }) => <MaterialCommunityIcons name="truck-check-outline" size={29} color="#1e2833" />,
         })}

@@ -7,7 +7,7 @@ const BrandInfoText = () =>{
         <View>
             <Text style={homePageStyles.title}>Márkák a raktárban</Text>
             <Text style={homePageStyles.info}>(A diagram belülről kifelé, a magyarázat fentről lefelé)</Text>
-            <Text style={homePageStyles.info}>Bővebb információ a "Raktáron" menüpontban található</Text>
+            <Text style={homePageStyles.info}>Bővebb információ a "Raktár/Raktáron" menüpontban</Text>
         </View>
     )
 }

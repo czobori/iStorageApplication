@@ -21,8 +21,8 @@ export default class Phones extends Component {
           data={this.state.data}
           keyExtractor={(item,index) => index.toString()}
           renderItem={({item}) =>
-            <View>
-              <Text>{(item.brand_name).toUpperCase()} {(item.model_name).toUpperCase()}</Text>
+            <View style={phoneStyles.rows}>
+              <Text style={phoneStyles.data}>{(item.brand_name).toUpperCase()} {(item.model_name).toUpperCase()}</Text>
             </View>
           }  
         />

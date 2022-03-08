@@ -42,6 +42,11 @@ const linking: LinkingOptions<RootStackParamList> = {
             screens:{
               LogoutScreen: 'logout'
             }
+          },
+          StorageScreen:{
+            screens:{
+              StorageScreen: 'storage'
+            }
           }
         },
       },

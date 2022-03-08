@@ -7,7 +7,6 @@ const partnersStyle = StyleSheet.create({
         paddingBottom:10,
         paddingTop:10,
         marginTop:15,
-        textAlign:'center'
     },
     text:{
         fontSize:18,
@@ -24,15 +23,16 @@ const partnersStyle = StyleSheet.create({
         color:'#fff'
     },
     names:{
-        fontSize:16,
-        color:'#fff',
-        textAlign:"left",
-        paddingLeft:25
+        borderWidth:1,
+        borderRadius:15,
+        padding:5,
+        backgroundColor:"#fff",
+        marginVertical:1,
+        textAlign:"center",
+        alignItems:"center"
     },
-    listicon:{
-        fontSize:14,
-        color:"#fff",
-        paddingRight:10
+    listnames:{
+        marginHorizontal:30
     }
 })
 export {partnersStyle};

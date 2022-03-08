@@ -23,8 +23,8 @@ export default class ClientName extends Component {
           data={this.state.data}
           keyExtractor={(item,index) => index.toString()}
           renderItem={({item}) =>
-            <View>
-              <Text style={partnersStyle.names}><AntDesign name="rightcircle" style={partnersStyle.listicon} />{item.client_name}</Text>
+            <View style={partnersStyle.listnames}>
+              <Text style={partnersStyle.names}>{item.client_name}</Text>
             </View>
           }  
         />

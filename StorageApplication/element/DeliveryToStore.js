@@ -19,7 +19,7 @@ export default class OnDelivery extends Component{
             <View style={deliveryCompStyles.div}>
                 <MaterialCommunityIcons name="truck-fast-outline" style={deliveryCompStyles.icons} />
                 <Text style={deliveryCompStyles.text}>Beérkező készülékek száma {this.state.come} db</Text>
-                <Text style={deliveryCompStyles.info}>Bővebb információ a "Beérkező" menüpontban található</Text>
+                <Text style={deliveryCompStyles.info}>Bővebb információ a "Raktár/Beérkező" menüpontban</Text>
             </View>
         )
     }
