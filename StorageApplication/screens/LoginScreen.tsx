@@ -6,10 +6,6 @@ import { LinearGradient } from 'expo-linear-gradient';
 import UserInput from '../components/input/usernameInputComp';
 import LoginButton from '../components/button/loginButtonComp';
 import LoginText from '../components/texts/LoginTextsComp';
-import Navigation from '../navigation';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
 
 export default function LoginScreen({ navigation }: RootTabScreenProps<'LoginScreen'>) {
   const [username,setUsername] = useState('');

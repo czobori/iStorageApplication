@@ -53,9 +53,11 @@ function BottomTabNavigator() {
       initialRouteName="LoginScreen"
       screenOptions={{tabBarActiveTintColor: Colors[colorScheme].tint,}}>
       <BottomTab.Screen
-        name="LoginScreen" component={LoginScreen}
-        options={({ navigation }: RootTabScreenProps<'LoginScreen'>) => ({
+        name="LoginScreen" component={LoginScreen} 
+        options={({ navigation}: RootTabScreenProps<'LoginScreen'>) => ({
           title: 'Bejelentkezés',
+          tabBarStyle: { display: "none" },
+          tabBarButton: () => null,
           tabBarIcon: ({ }) => <Entypo name="login" size={24} color="#1e2833" />,
           headerRight: () => (
             <Pressable
