@@ -1,0 +1,1 @@
+{"ast":null,"code":"export var url = \"http://localhost:4550\";","map":{"version":3,"sources":["C:/szakdolgozat/uj/StorageApplication/const/url.tsx"],"names":["url"],"mappings":"AAAA,OAAO,IAAMA,GAAG,GAAC,uBAAV","sourcesContent":["export const url=\"http://localhost:4550\";"]},"metadata":{},"sourceType":"module"}

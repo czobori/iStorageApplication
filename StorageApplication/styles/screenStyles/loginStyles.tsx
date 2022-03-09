@@ -9,9 +9,7 @@ const loginPageStyles = StyleSheet.create({
     borderWidth: 1,
     borderColor:'#fff'
   },
-  buttonText: {
-    fontSize: 20,
-  },
+  buttonText: {fontSize: 20,},
   text: {
     fontSize:15,
     marginTop:10,
@@ -36,8 +34,13 @@ const loginPageStyles = StyleSheet.create({
     fontFamily:"Cochin-Italic",
     textAlign:"center"
   },
-  feher:{
-    color:'#fff'
+  feher:{color:'#fff'},
+  errortext:{
+    color:'#FF1000',
+    alignSelf:"stretch",
+    textAlign:"center",
+    fontSize:12,
+    fontWeight:"bold"
   }
 });
 export {loginPageStyles};
