@@ -1,8 +1,8 @@
-import { StyleSheet, TouchableOpacity } from 'react-native';
-import { Text, View } from '../components/Themed';
-import { RootStackScreenProps } from '../types';
-import { containerStyles } from '../styles/element/containerStyle';
-import { notFoundPageStyles } from '../styles/screenStyles/notfoundStyles';
+import {TouchableOpacity } from 'react-native';
+import {Text, View } from '../components/Themed';
+import {RootStackScreenProps } from '../types';
+import {containerStyles} from '../styles/element/containerStyle';
+import {notFoundPageStyles} from '../styles/screenStyles/notfoundStyles';
 import GradientBack from '../components/linegradient/linegradent';
 
 export default function NotFoundScreen({ navigation }: RootStackScreenProps<'NotFound'>) {

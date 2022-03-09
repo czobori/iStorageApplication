@@ -1,6 +1,6 @@
-import { View } from '../components/Themed';
-import { RootTabScreenProps } from '../types';
-import { containerStyles } from '../styles/element/containerStyle';
+import {View} from '../components/Themed';
+import {RootTabScreenProps} from '../types';
+import {containerStyles} from '../styles/element/containerStyle';
 import React, {useState} from 'react';
 import LogoutButton from '../components/button/logoutButtonComp';
 import LogoutText from '../components/texts/LogoutTextsComp';
