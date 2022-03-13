@@ -12,22 +12,26 @@ import { getAllUserData } from '../data/getUserData';
 
 
 export default function LoginScreen({ navigation }: RootTabScreenProps<'LoginScreen'>) {
-
   const {control,handleSubmit, formState: {errors},watch} = useForm();
   const onLoginPressed = (data: any) =>{
-    const username = watch('username');
+    const originusername = watch('username');
     const originPwd = watch('password');
- 
-    const allUserData = getAllUserData();
-    console.log(allUserData);
-
-    const usernames = () =>{
-      //return allUserData.map(x=>)
+    const id = watch('id');
+    const User ={
+      username: originusername,
+      password:originPwd,
     }
-    
-    console.log();
-      
-      
+    const options={
+      method:'POST',
+      body:JSON.stringify(User),
+      headers:{
+        'Content-Type':'application/json'
+      }
+    }
+
+    fetch("http://localhost:4550/Login",options)
+      .then(res=>res.json())
+      .then(res=>console.log(res))
     
     //navigation.navigate("HomeScreen");
   };
@@ -35,12 +39,15 @@ export default function LoginScreen({ navigation }: RootTabScreenProps<'LoginScr
   return (
     <View style={containerStyles.container}>
       <GradientBack/>
+      
       <LoginText/>
       <UserInput name="username" placeholder="felhasználónév" 
         control={control} rules={{required:'Felhasználónév megadása kötelező!'}} secureTextEntry={false} />
       <UserInput name="password" placeholder="jelszó" control={control} 
-        rules={{required:'Jelszó megadása kötelező!'}} secureTextEntry={true}/>
-      <LoginButton onPress={handleSubmit(onLoginPressed)}/>
+         rules={{required:'Jelszó megadása kötelező!'}} secureTextEntry={true}/>
+      <UserInput name="id" placeholder="azonosító" control={control} 
+        rules={{required:'Azonosító megadása kötelező!'}} secureTextEntry={true}/>
+     {/*} <LoginButton onPress={handleSubmit(onLoginPressed)}/>*/}
     </View>
   );
 }
