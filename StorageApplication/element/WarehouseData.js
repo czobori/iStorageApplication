@@ -18,7 +18,7 @@ export default class Warehouse extends Component {
   render() {
     return (
       <View style={warehouseStyle.div}>
-        <Text style={warehouseStyle.name}>{this.state.data.wh_name}</Text>
+        <Text style={warehouseStyle.name}>{this.state.data.whname}</Text>
         <Text>{this.state.data.location}</Text>
         <Text>Raktár teljes kapacitása: 5000</Text>
       </View>

@@ -9,6 +9,7 @@ const screenInfoTextStyles = StyleSheet.create({
     lineHeight: 24,
     marginTop:15,
     textAlign: 'justify',
+    marginBottom:10
   },
   helpContainer: {
     marginTop: 15,

@@ -7,6 +7,7 @@ const partnersStyle = StyleSheet.create({
         paddingBottom:10,
         paddingTop:10,
         marginTop:15,
+        marginBottom:15
     },
     text:{
         fontSize:18,

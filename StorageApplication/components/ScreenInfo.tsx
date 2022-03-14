@@ -17,14 +17,6 @@ export default function ScreenInfo({ path }: { path: string }) {
           Bejelentkezni csak azok a dolgozók tudnak, akik már benne vannak a rendszerünkben. Ha még nincs benne, akkor forduljon a raktár vezetőjéhez. Más probléma esetén keresse meg az Admint.
         </Text>
       </View>
-
-      <View style={screenInfoTextStyles.helpContainer}>
-        <TouchableOpacity onPress={handleHelpPress} style={screenInfoTextStyles.helpLink}>
-          <Text style={screenInfoTextStyles.helpLinkText} lightColor={Colors.light.tint}>
-            Az alkalmazás weboldalát ide kattintva megtanálja.
-          </Text>
-        </TouchableOpacity>
-      </View>
     </View>
   );
 }
