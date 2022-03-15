@@ -8,7 +8,6 @@ import UserInput from '../components/input/userInputComp';
 import LoginButton from '../components/button/loginButtonComp';
 import LoginText from '../components/texts/LoginTextsComp';
 import GradientBack from '../components/linegradient/linegradent';
-import { Base64 } from 'js-base64';
 import { getAllUserData } from '../data/getUserData';
 
 export default function LoginScreen({ navigation }: RootTabScreenProps<'LoginScreen'>) {
@@ -30,11 +29,10 @@ export default function LoginScreen({ navigation }: RootTabScreenProps<'LoginScr
     fetch("http://localhost:4550/Login",option)
       .then(res=>res.json())
       .then(res=>{
-        if(res.data == 'auth_success') navigation.navigate("HomeScreen")
-        else console.log("Hiba");
+        if(res.data == 'auth_success') {navigation.navigate("HomeScreen");}
+        else {console.log("Hiba");}
     })
-     
-    navigation.navigate("HomeScreen");
+    //navigation.navigate("HomeScreen");
   };
 
   return (
@@ -46,7 +44,6 @@ export default function LoginScreen({ navigation }: RootTabScreenProps<'LoginScr
       <UserInput name="password" placeholder="jelszó" control={control} 
         rules={{required:'Jelszó megadása kötelező!'}} secureTextEntry={true}/>
       <LoginButton onPress={handleSubmit(onLoginPressed)}/>
-      
     </View>
   );
 }

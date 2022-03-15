@@ -33,7 +33,7 @@ app.use(partnerNumber);
 app.use(clientNames);
 app.use(phoneTypes);
 app.use(LoginData);
-app.use(Login)
+app.use(Login);
 
 const server = app.listen(4550, function(){
     const host = server.address().address

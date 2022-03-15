@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
-import {View,Dimensions} from 'react-native';
+import {View,Dimensions, Button} from 'react-native';
 import {ProgressChart} from 'react-native-chart-kit'
 import { progressCartConfig } from '../const/ChartKitConfig';
 import { homePageStyles } from '../styles/screenStyles/homeStyle';
 import BrandInfoText from '../components/texts/BrandProgressInfoTextCom';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 export default class ChartBrand extends Component {
 
   state ={
