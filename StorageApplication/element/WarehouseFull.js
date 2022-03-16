@@ -6,7 +6,7 @@ export default class WarehouseSaturation extends Component{
     state ={
         num:0,
     }
-    
+
     fetchData= async()=>{
         const currently = await (await fetch ('http://localhost:4550/currentlyInStock')).json();
         this.setState({num:currently.number/5000});

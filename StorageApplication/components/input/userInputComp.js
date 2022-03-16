@@ -10,8 +10,7 @@ const UserInput = ({control,name,rules={},placeholder,secureTextEntry}) =>{
                 <View>
                     <TextInput value={value} onChangeText={onChange} onBlur={onBlur} secureTextEntry={secureTextEntry}
                         placeholder={placeholder} placeholderTextColor="#F4F6F7"
-                        style={[loginPageStyles.input,{borderColor: error ? '#FF1000':'#FDFEFE'},{borderWidth: error? 2 : 1}]}
-                        />
+                        style={[loginPageStyles.input,{borderColor: error ? '#FF1000':'#FDFEFE'},{borderWidth: error? 2 : 1}]}/>
                     {error && (<Text style={loginPageStyles.errortext}>{error.message || 'Hiba!'}</Text>)}
                 </View>
             </>

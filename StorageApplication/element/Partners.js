@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Text, View,FlatList} from 'react-native';
+import {Text, View} from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import { partnersStyle } from '../styles/element/PartnersStyle';
 import ClientName from './ClientNameList';

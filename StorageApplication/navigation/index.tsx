@@ -21,7 +21,7 @@ import StorageScreen from '../screens/StorageScreen';
 
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
-import { FontAwesome5,MaterialCommunityIcons,Entypo,Fontisto,MaterialIcons,AntDesign } from '@expo/vector-icons';
+import { FontAwesome5,MaterialCommunityIcons,Entypo,Fontisto,MaterialIcons} from '@expo/vector-icons';
 
 import { Text } from '../components/Themed';
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
@@ -37,7 +37,6 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 function RootNavigator() {
   return (
     <Stack.Navigator>
-      {/*alapból a login scrren latszik csak - eredetileg BottomTaabNavigator*/}
       <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
@@ -128,11 +127,8 @@ function BottomTabNavigator() {
     
   );
 }
-/** You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/  */
+
 function TabBarIcon(props: {
   name: React.ComponentProps<typeof FontAwesome>['name'];
   color: string;
-}){
-  return <FontAwesome size={30} style={{ marginBottom: -3}} {...props} />;
-}
-
+}){return <FontAwesome size={30} style={{ marginBottom: -3}} {...props} />;}

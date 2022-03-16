@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {Text, View,FlatList} from 'react-native';
 import { partnersStyle } from '../styles/element/PartnersStyle';
-import { AntDesign } from '@expo/vector-icons';
 
 export default class ClientName extends Component {
   state ={
