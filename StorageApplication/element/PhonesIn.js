@@ -11,9 +11,8 @@ export default class Phones extends Component {
     const phones = await response.json();
     this.setState({data: phones});
   }
-  componentDidMount(){
-    this.fetchData();
-  }
+  componentDidMount(){this.fetchData();}
+  
   render() {
     return (
       <View style={phoneStyles.div}>

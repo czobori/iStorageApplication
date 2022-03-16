@@ -11,9 +11,7 @@ export default class WarehouseSaturation extends Component{
         const currently = await (await fetch ('http://localhost:4550/currentlyInStock')).json();
         this.setState({num:currently.number/5000});
     }
-    componentDidMount(){
-        this.fetchData();
-    }
+    componentDidMount(){this.fetchData();}
     
     render(){
         const szazalekkerekitve = Math.round((this.state.num*100)*100)/100;

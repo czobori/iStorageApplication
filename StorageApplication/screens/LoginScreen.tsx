@@ -11,8 +11,11 @@ import GradientBack from '../components/linegradient/linegradent';
 
 export default function LoginScreen({ navigation }: RootTabScreenProps<'LoginScreen'>) {
   const notMatch=()=>{Alert.alert("Hibás adatbevitel!");}
-
-  const {control,handleSubmit, formState: {errors},watch} = useForm();
+  const {control,handleSubmit, formState: {errors},watch,reset} = useForm({
+    defaultValues:{
+      username:"",
+      password:""
+  }});
 
   const onLoginPressed = (data: any) =>{ 
     const User={
@@ -31,6 +34,10 @@ export default function LoginScreen({ navigation }: RootTabScreenProps<'LoginScr
         if(res.message == 'auth_success') navigation.navigate("HomeScreen");
         else {console.log("error");notMatch();}
     })
+    reset({
+      username:"",
+      password:"",
+    });
   };
 
   return (

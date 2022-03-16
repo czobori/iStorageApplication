@@ -11,9 +11,8 @@ export default class OnDelivery extends Component{
         const darab = await (await fetch ('http://localhost:4550/deliveryToStorage')).json();
         this.setState({come:darab.raktarbaJon});
     }
-    componentDidMount(){
-        this.fetchData();
-    }
+    componentDidMount(){this.fetchData();}
+    
     render(){
         return(
             <View style={deliveryCompStyles.div}>

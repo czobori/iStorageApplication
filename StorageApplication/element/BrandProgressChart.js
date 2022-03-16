@@ -4,6 +4,7 @@ import {ProgressChart} from 'react-native-chart-kit'
 import { progressCartConfig } from '../const/ChartKitConfig';
 import { homePageStyles } from '../styles/screenStyles/homeStyle';
 import BrandInfoText from '../components/texts/BrandProgressInfoTextCom';
+
 export default class ChartBrand extends Component {
 
   state ={
@@ -18,19 +19,13 @@ export default class ChartBrand extends Component {
     const currently = await (await fetch ('http://localhost:4550/currentlyInStock')).json();
     this.setState({osszes:currently.number});
   }
-  componentDidMount(){
-    this.fetchData();
-  }
+
+  componentDidMount(){this.fetchData();}
 
   render() {
     const arr = this.state.data;
-    const brandNames = () => {
-      return arr.map(x => x.brand_name);
-    }
-    
-    const berendeltDbs = () => {
-      return arr.map(x => x.berendeltDb/this.state.osszes);
-    }
+    const brandNames = () => {return arr.map(x => x.brand_name);}
+    const berendeltDbs = () => {return arr.map(x => x.berendeltDb/this.state.osszes);}
     
     const data = {
       labels: brandNames(),
@@ -42,8 +37,7 @@ export default class ChartBrand extends Component {
         <BrandInfoText/>
         <ProgressChart data={data}
           width={Dimensions.get('window').width-70 } height={180} 
-          chartConfig={progressCartConfig} style={{borderRadius: 16}} strokeWidth= {11}
-        />
+          chartConfig={progressCartConfig} style={{borderRadius: 16}} strokeWidth= {11}/>
       </View>
     )
   }

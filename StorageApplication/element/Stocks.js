@@ -15,9 +15,7 @@ export default class Stocks extends Component {
     this.setState({data: stock});
 
   }
-  componentDidMount(){
-    this.fetchData();
-  }
+  componentDidMount(){this.fetchData();}
  
   render() {
     Moment.locale('en');

@@ -3,9 +3,7 @@ import { CompositeScreenProps, NavigatorScreenParams } from '@react-navigation/n
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 declare global {
-  namespace ReactNavigation {
-    interface RootParamList extends RootStackParamList {}
-  }
+  namespace ReactNavigation {interface RootParamList extends RootStackParamList {}}
 }
 
 export type RootStackParamList = {
@@ -19,7 +17,6 @@ export type RootStackScreenProps<Screen extends keyof RootStackParamList> = Nati
   Screen
 >;
 
-// screen export need!!!!
 export type RootTabParamList = {
   LoginScreen: undefined;
   LogoutScreen:undefined;

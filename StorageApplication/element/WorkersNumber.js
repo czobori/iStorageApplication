@@ -11,9 +11,8 @@ export default class UsersNumber extends Component{
         const person = await(await fetch ('http://localhost:4550/workersNumber')).json();
         this.setState({people:person.workersCount});
     }
-    componentDidMount(){
-        this.fetchData();
-    }
+    componentDidMount(){this.fetchData();}
+
     render(){
         return(
             <View style={workersCountStyle.div}>

@@ -12,9 +12,8 @@ export default class ClientName extends Component {
     const clients = await response.json();
     this.setState({data: clients});
   }
-  componentDidMount(){
-    this.fetchData();
-  }
+  componentDidMount(){this.fetchData();}
+  
   render() {
     return (
       <View>

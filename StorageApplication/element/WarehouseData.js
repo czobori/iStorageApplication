@@ -12,9 +12,8 @@ export default class Warehouse extends Component {
     const warehouse = await response.json();
     this.setState({data: warehouse});
   }
-  componentDidMount(){
-    this.fetchData();
-  }
+  componentDidMount(){this.fetchData();}
+
   render() {
     return (
       <View style={warehouseStyle.div}>

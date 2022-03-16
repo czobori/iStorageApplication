@@ -13,9 +13,8 @@ export default class Partners extends Component{
         const client = await(await fetch ('http://localhost:4550/partnerNumber')).json();
         this.setState({ember:client.clientDB});
     }
-    componentDidMount(){
-        this.fetchData();
-    }
+    componentDidMount(){this.fetchData();}
+    
     render(){
         return(
             <View style={partnersStyle.div}>

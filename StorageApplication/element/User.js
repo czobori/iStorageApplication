@@ -12,9 +12,8 @@ export default class User extends Component {
     const users = await response.json();
     this.setState({data: users});
   }
-  componentDidMount(){
-    this.fetchData();
-  }
+  componentDidMount(){this.fetchData();}
+  
   render() {
     return (
       <View>

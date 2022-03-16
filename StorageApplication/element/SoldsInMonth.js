@@ -17,9 +17,7 @@ export default class SoldsThisMonth extends Component {
     this.setState({yearMonth: solds[0].date});
 
   }
-  componentDidMount(){
-    this.fetchData();
-  }
+  componentDidMount(){this.fetchData();}
  
   render() {
     Moment.locale('hu');

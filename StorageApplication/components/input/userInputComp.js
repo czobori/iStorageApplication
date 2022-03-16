@@ -4,6 +4,7 @@ import {Controller} from 'react-hook-form'
 import { loginPageStyles } from '../../styles/screenStyles/loginStyles';
 
 const UserInput = ({control,name,rules={},placeholder,secureTextEntry}) =>{
+    
     return (
         <Controller control={control} name={name} rules={rules} render={({field: {value,onChange,onBlur},fieldState:{error}})=>(
             <>
