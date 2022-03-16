@@ -29,7 +29,8 @@ export default function LoginScreen({ navigation }: RootTabScreenProps<'LoginScr
     fetch("http://localhost:4550/Login",option)
       .then(res=>res.json())
       .then(res=>{
-        if(res.data == 'auth_success') {navigation.navigate("HomeScreen");}
+        console.log(res);
+        if(res.message == 'auth_success') {navigation.navigate("HomeScreen");}
         else {console.log("Hiba");}
     })
     //navigation.navigate("HomeScreen");
