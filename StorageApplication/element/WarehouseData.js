@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Text, View} from 'react-native';
 import { warehouseStyle } from '../styles/element/warehouseStyle';
+import { url } from '../const/url';
 
 export default class Warehouse extends Component {
   state ={
@@ -8,7 +9,7 @@ export default class Warehouse extends Component {
   }
 
   fetchData= async()=>{
-    const response = await fetch('http://localhost:4550/warehouseData');
+    const response = await fetch(url+'/warehouseData');
     const warehouse = await response.json();
     this.setState({data: warehouse});
   }

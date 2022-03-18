@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Text, View,FlatList} from 'react-native';
 import { partnersStyle } from '../styles/element/PartnersStyle';
+import { url } from '../const/url';
 
 export default class ClientName extends Component {
   state ={
@@ -8,7 +9,7 @@ export default class ClientName extends Component {
   }
 
   fetchData= async()=>{
-    const response = await fetch('http://localhost:4550/clientNames');
+    const response = await fetch(url+'/clientNames');
     const clients = await response.json();
     this.setState({data: clients});
   }

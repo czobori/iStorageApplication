@@ -3,6 +3,7 @@ import {Text, View} from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import { partnersStyle } from '../styles/element/PartnersStyle';
 import ClientName from './ClientNameList';
+import { url } from '../const/url';
 
 export default class Partners extends Component{
     state={
@@ -10,7 +11,7 @@ export default class Partners extends Component{
         data:[]
     }
     fetchData = async()=>{
-        const client = await(await fetch ('http://localhost:4550/partnerNumber')).json();
+        const client = await(await fetch (url+'/partnerNumber')).json();
         this.setState({ember:client.clientDB});
     }
     componentDidMount(){this.fetchData();}

@@ -3,6 +3,7 @@ import {Text, View,FlatList} from 'react-native';
 import Moment from 'moment';
 import { soldsComponentStyles } from '../styles/componentStyles/SoldsDataComponent';
 import SoldInMonthText from '../components/texts/SoldInMonthTextComp';
+import { url } from '../const/url';
 
 export default class SoldsThisMonth extends Component {
   state ={
@@ -11,7 +12,7 @@ export default class SoldsThisMonth extends Component {
   }
 
   fetchData= async()=>{
-    const response = await fetch('http://localhost:4550/sold');
+    const response = await fetch(url+'/sold');
     const solds = await response.json();
     this.setState({data: solds});
     this.setState({yearMonth: solds[0].date});

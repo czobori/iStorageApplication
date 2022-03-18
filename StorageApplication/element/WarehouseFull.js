@@ -2,13 +2,15 @@ import React, {Component} from 'react';
 import {Text, View,Dimensions} from 'react-native';
 import * as Progress from 'react-native-progress';
 import { warehousefullStyle } from '../styles/element/progressbarStyle';
+import { url } from '../const/url';
+
 export default class WarehouseSaturation extends Component{
     state ={
         num:0,
     }
 
     fetchData= async()=>{
-        const currently = await (await fetch ('http://localhost:4550/currentlyInStock')).json();
+        const currently = await (await fetch (url+'/currentlyInStock')).json();
         this.setState({num:currently.number/5000});
     }
     componentDidMount(){this.fetchData();}

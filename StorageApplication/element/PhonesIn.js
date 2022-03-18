@@ -1,13 +1,15 @@
 import React, {Component} from 'react';
 import {Text, View,FlatList} from 'react-native';
 import { phoneStyles } from '../styles/element/phoneInStyles';
+import { url } from '../const/url';
+
 export default class Phones extends Component {
   state ={
     data:[]
   }
 
   fetchData= async()=>{
-    const response = await fetch('http://localhost:4550/phoneTypes');
+    const response = await fetch(url+'/phoneTypes');
     const phones = await response.json();
     this.setState({data: phones});
   }

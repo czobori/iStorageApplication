@@ -3,6 +3,7 @@ import {Text, View,FlatList} from 'react-native';
 import { stockComponentStyles } from '../styles/componentStyles/StockDataComponentStyle';
 import Moment from 'moment';
 import OrderInText from '../components/texts/OrderInTextComp';
+import { url } from '../const/url';
 
 export default class Stocks extends Component {
   state ={
@@ -10,7 +11,7 @@ export default class Stocks extends Component {
   }
 
   fetchData= async()=>{
-    const response = await fetch('http://localhost:4550/stock');
+    const response = await fetch(url+'/stock');
     const stock = await response.json();
     this.setState({data: stock});
 

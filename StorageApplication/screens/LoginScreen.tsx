@@ -8,6 +8,7 @@ import UserInput from '../components/input/userInputComp';
 import LoginButton from '../components/button/loginButtonComp';
 import LoginText from '../components/texts/LoginTextsComp';
 import GradientBack from '../components/linegradient/linegradent';
+import { url } from '../const/url';
 
 export default function LoginScreen({ navigation }: RootTabScreenProps<'LoginScreen'>) {
   const notMatch=()=>{Alert.alert("Hibás adatbevitel!");}
@@ -27,7 +28,7 @@ export default function LoginScreen({ navigation }: RootTabScreenProps<'LoginScr
       body:JSON.stringify(User),
       headers:{'Content-Type': 'application/json'}
     }
-    fetch("http://localhost:4550/Login",option)
+    fetch(url+'/Login',option)
       .then(res=>res.json())
       .then(res=>{
         console.log(res);

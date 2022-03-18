@@ -4,6 +4,7 @@ import {ProgressChart} from 'react-native-chart-kit'
 import { progressCartConfig } from '../const/ChartKitConfig';
 import { homePageStyles } from '../styles/screenStyles/homeStyle';
 import BrandInfoText from '../components/texts/BrandProgressInfoTextCom';
+import { url } from '../const/url';
 
 export default class ChartBrand extends Component {
 
@@ -13,10 +14,10 @@ export default class ChartBrand extends Component {
   }
 
   fetchData= async()=>{
-    const response = await fetch('http://localhost:4550/accordingToTheBrand');
+    const response = await fetch(url+'/accordingToTheBrand');
     const diagramdata = await response.json();
     this.setState({data: diagramdata});
-    const currently = await (await fetch ('http://localhost:4550/currentlyInStock')).json();
+    const currently = await (await fetch (url+'/currentlyInStock')).json();
     this.setState({osszes:currently.number});
   }
 

@@ -2,13 +2,14 @@ import React, {Component} from 'react';
 import {Text, View} from 'react-native';
 import { MaterialCommunityIcons} from '@expo/vector-icons';
 import { deliveryCompStyles } from '../styles/element/ondeliveryStyle';
+import { url } from '../const/url';
 
 export default class OnDelivery extends Component{
     state ={
         come:0
     }
     fetchData= async()=>{
-        const darab = await (await fetch ('http://localhost:4550/deliveryToStorage')).json();
+        const darab = await (await fetch (url+'/deliveryToStorage')).json();
         this.setState({come:darab.raktarbaJon});
     }
     componentDidMount(){this.fetchData();}

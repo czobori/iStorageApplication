@@ -2,13 +2,14 @@ import React, {Component} from 'react';
 import {Text, View} from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { workersCountStyle } from '../styles/element/workNumStyle';
+import { url } from '../const/url';
 
 export default class UsersNumber extends Component{
     state={
         people:0
     }
     fetchData = async()=>{
-        const person = await(await fetch ('http://localhost:4550/workersNumber')).json();
+        const person = await(await fetch (url+'/workersNumber')).json();
         this.setState({people:person.workersCount});
     }
     componentDidMount(){this.fetchData();}
