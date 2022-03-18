@@ -4,36 +4,25 @@ const cors = require('cors');
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
 
-import userdata from './routers/usersData';
-import brandData from './routers/brandAccordData';
-import currentData from './routers/currentlyinstockData';
-import deliverynumber from './routers/deliveryToStorageData';
-import warehouseData from './routers/warehouseData';
-import stockData from './routers/stockData';
-import soldData from './routers/soldData';
-import workersNumber from './routers/workersCount';
-import partnerNumber from './routers/partnerNumber';
-import clientNames from './routers/clientNameData';
-import phoneTypes from './routers/phoneTypesData';
-import LoginData from './routers/loginData'
 import Login from './routers/Login';
+import * as Query from '../const/allQuery.tsx';
 
 app.use(bodyParser.json({type:'application/json'}));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(cors());
-app.use(userdata);
-app.use(brandData);
-app.use(currentData);
-app.use(deliverynumber);
-app.use(warehouseData);
-app.use(stockData);
-app.use(soldData);
-app.use(workersNumber);
-app.use(partnerNumber);
-app.use(clientNames);
-app.use(phoneTypes);
-app.use(LoginData);
+
 app.use(Login);
+app.use(Query.userdata);
+app.use(Query.brandData);
+app.use(Query.currentData);
+app.use(Query.deliverynumber);
+app.use(Query.warehouseData);
+app.use(Query.stockData);
+app.use(Query.soldData);
+app.use(Query.workersNumber);
+app.use(Query.partnerNumber);
+app.use(Query.clientNames);
+app.use(Query.phoneTypes);
 
 const server = app.listen(4550, function(){
     const host = server.address().address

@@ -7,7 +7,6 @@ export default class Warehouse extends Component {
   state ={
     data:[]
   }
-
   fetchData= async()=>{
     const response = await fetch(url+'/warehouseData');
     const warehouse = await response.json();

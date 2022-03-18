@@ -8,16 +8,7 @@ import { ColorSchemeName, Pressable} from 'react-native';
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 
-import InfoScreen from '../screens/InfoScreen';
-import NotFoundScreen from '../screens/NotFoundScreen';
-import LoginScreen from '../screens/LoginScreen';
-import UsersScreen from '../screens/UsersScreen';
-import HomeScreen from '../screens/HomeScreen';
-import OrderInScreen from '../screens/OrderInScreen';
-import OrderOutScreen from '../screens/OrderOutScreen';
-import PhoneHereScreen from '../screens/PhoneHereScreen';
-import LogoutScreen from '../screens/LogoutScreen copy';
-import StorageScreen from '../screens/StorageScreen';
+import * as Screens from '../const/allScreen';
 
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
@@ -38,9 +29,9 @@ function RootNavigator() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
-      <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
+      <Stack.Screen name="NotFound" component={Screens.NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
-        <Stack.Screen name="Info" component={InfoScreen} />
+        <Stack.Screen name="Info" component={Screens.InfoScreen} />
       </Stack.Group>
     </Stack.Navigator>
   );
@@ -56,7 +47,7 @@ function BottomTabNavigator() {
       initialRouteName="LoginScreen"
       screenOptions={{tabBarActiveTintColor: Colors[colorScheme].tint,}}>
       <BottomTab.Screen
-        name="LoginScreen" component={LoginScreen} 
+        name="LoginScreen" component={Screens.LoginScreen} 
         options={({ navigation}: RootTabScreenProps<'LoginScreen'>) => ({
           title: 'Bejelentkezés',
           tabBarStyle: { display: "none" },
@@ -72,14 +63,14 @@ function BottomTabNavigator() {
         })}
       />
       <BottomTab.Screen
-        name="HomeScreen" component={HomeScreen}
+        name="HomeScreen" component={Screens.HomeScreen}
         options={({ navigation }: RootTabScreenProps<'HomeScreen'>) => ({
           title: 'Statisztikák',
           tabBarIcon: ({ color }) => <MaterialIcons name="storage" size={27} color="#1e2833" />,
         })}
       />
       <BottomTab.Screen
-        name="OrderInScreen" component={OrderInScreen}
+        name="OrderInScreen" component={Screens.OrderInScreen}
         options={({ navigation }: RootTabScreenProps<'OrderInScreen'>) => ({
           tabBarButton: () => null,
           title: 'Beérkező',
@@ -87,14 +78,14 @@ function BottomTabNavigator() {
         })}
       />
       <BottomTab.Screen
-        name="StorageScreen" component={StorageScreen}
+        name="StorageScreen" component={Screens.StorageScreen}
         options={({ navigation }: RootTabScreenProps<'StorageScreen'>) => ({
           title: 'Raktár',
           tabBarIcon: ({ color }) => <FontAwesome name="inbox" size={26} color="#1e2833" />,
         })}
       />
       <BottomTab.Screen
-        name="PhoneHereScreen" component={PhoneHereScreen}
+        name="PhoneHereScreen" component={Screens.PhoneHereScreen}
         options={({ navigation }: RootTabScreenProps<'PhoneHereScreen'>) => ({
           tabBarButton: () => null,
           title: 'Raktáron',
@@ -102,7 +93,7 @@ function BottomTabNavigator() {
         })}
       />
       <BottomTab.Screen
-        name="OrderOutScreen" component={OrderOutScreen}
+        name="OrderOutScreen" component={Screens.OrderOutScreen}
         options={({ navigation }: RootTabScreenProps<'OrderOutScreen'>) => ({
           tabBarButton: () => null,
           title: 'Kimenő',
@@ -110,14 +101,14 @@ function BottomTabNavigator() {
         })}
       />
       <BottomTab.Screen
-        name="UsersScreen" component={UsersScreen}
+        name="UsersScreen" component={Screens.UsersScreen}
         options={({ navigation }: RootTabScreenProps<'UsersScreen'>) => ({
           title: 'Raktárosok',
           tabBarIcon: ({ color }) => <FontAwesome5 name="users" size={24} color="#1e2833" />,
         })}
       />
       <BottomTab.Screen
-        name="LogoutScreen" component={LogoutScreen}
+        name="LogoutScreen" component={Screens.LogoutScreen}
         options={({ navigation }: RootTabScreenProps<'LogoutScreen'>) => ({
           title: 'Kijelentkezés',
           tabBarIcon: ({ color }) => <Entypo name="log-out" size={24} color="#1e2833" />,

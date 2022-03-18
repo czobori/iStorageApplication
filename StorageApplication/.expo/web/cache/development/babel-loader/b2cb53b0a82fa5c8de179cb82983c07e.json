@@ -1,0 +1,1 @@
+{"ast":null,"code":"export var users = \"/user\";","map":{"version":3,"sources":["C:/szakdolgozat/uj/StorageApplication/const/accesPoints.js"],"names":["users"],"mappings":"AAAA,OAAO,IAAMA,KAAK,GAAG,OAAd","sourcesContent":["export const users = \"/user\";"]},"metadata":{},"sourceType":"module"}

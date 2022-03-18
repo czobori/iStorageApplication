@@ -10,13 +10,11 @@ export default class SoldsThisMonth extends Component {
     data:[],
     yearMonth:""
   }
-
   fetchData= async()=>{
     const response = await fetch(url+'/sold');
     const solds = await response.json();
     this.setState({data: solds});
     this.setState({yearMonth: solds[0].date});
-
   }
   componentDidMount(){this.fetchData();}
  

@@ -8,46 +8,14 @@ const linking: LinkingOptions<RootStackParamList> = {
     screens: {
       Root: {
         screens: {
-          LoginScreen:{
-            screens:{
-              LoginScreen: 'login',
-            },
-          },
-          HomeScreen:{
-            screens:{
-              HomeScreen: 'home',
-            }
-          },
-          UsersScreen:{
-            screens:{
-              UsersScreen: 'users',
-            }
-          },
-          OrderInScreen:{
-            screens:{
-              OrderInScreen : 'orderIn',
-            }
-          },
-          OrderOutScreen:{
-            screens:{
-              OrderOutScreen: 'orderOut',
-            }
-          },
-          PhoneHereScreen:{
-            screens:{
-              PhoneHereScreen: 'phoneHere',
-            }
-          },
-          LogoutScreen:{
-            screens:{
-              LogoutScreen: 'logout'
-            }
-          },
-          StorageScreen:{
-            screens:{
-              StorageScreen: 'storage'
-            }
-          }
+          LoginScreen:{ screens:{LoginScreen: 'login'}},
+          HomeScreen:{screens:{HomeScreen: 'home'}},
+          UsersScreen:{screens:{UsersScreen: 'users'}},
+          OrderInScreen:{screens:{OrderInScreen : 'orderIn'}},
+          OrderOutScreen:{screens:{ OrderOutScreen: 'orderOut'}},
+          PhoneHereScreen:{screens:{PhoneHereScreen: 'phoneHere'}},
+          LogoutScreen:{screens:{LogoutScreen: 'logout'}},
+          StorageScreen:{screens:{StorageScreen: 'storage'}}
         },
       },
       Info: 'info',

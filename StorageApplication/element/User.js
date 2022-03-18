@@ -3,11 +3,11 @@ import {Text, View,FlatList} from 'react-native';
 import { userComponentStyles } from '../styles/componentStyles/UserDataComponentStyle';
 import { AntDesign,Entypo } from '@expo/vector-icons';
 import { url } from '../const/url';
+
 export default class User extends Component {
   state ={
     data:[]
   }
-
   fetchData= async()=>{
     const response = await fetch(url+'/user');
     const users = await response.json();

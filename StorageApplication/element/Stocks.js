@@ -9,12 +9,10 @@ export default class Stocks extends Component {
   state ={
     data:[]
   }
-
   fetchData= async()=>{
     const response = await fetch(url+'/stock');
     const stock = await response.json();
     this.setState({data: stock});
-
   }
   componentDidMount(){this.fetchData();}
  
