@@ -2,9 +2,9 @@ import {RootTabScreenProps} from '../types';
 import {View} from 'react-native';
 import {containerStyles} from '../styles/element/containerStyle';
 import {ScrollView} from 'react-native-gesture-handler';
-import Stocks from '../element/Stocks';
 import GradientBack from '../components/linegradient/linegradent';
-import BackButton from '../components/button/backButtonComp';
+import * as Elements from '../const/allElements';
+import * as Components from '../const/allComponents';
 
 export default function OrderInScreen({ navigation }: RootTabScreenProps<'OrderInScreen'>) {
   const onBackPressed = () =>{navigation.navigate("StorageScreen");}
@@ -12,8 +12,8 @@ export default function OrderInScreen({ navigation }: RootTabScreenProps<'OrderI
     <View style={containerStyles.container}>
       <GradientBack/>
       <ScrollView showsHorizontalScrollIndicator={false}>
-        <BackButton onPress={onBackPressed}/>
-        <Stocks/>
+        <Components.BackButton onPress={onBackPressed}/>
+        <Elements.Stocks/>
       </ScrollView>
     </View>
   )

@@ -7,9 +7,9 @@ const InButton = ({onPress}) =>{
     return (
         <View>
             <Pressable style={storagePageStyles.button} onPress={onPress}>
-            <FontAwesome name="inbox" style={storagePageStyles.icon} />
-                    <Text style={storagePageStyles.text}>Raktáron</Text>
-                </Pressable>
+                <FontAwesome name="inbox" style={storagePageStyles.icon} />
+                <Text style={storagePageStyles.text}>Raktáron</Text>
+            </Pressable>
         </View>
     )
 }

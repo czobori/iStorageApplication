@@ -2,7 +2,7 @@ import { View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 import { containerStyles } from '../styles/element/containerStyle';
 import { ScrollView } from 'react-native-gesture-handler';
-import User from "../element/User";
+import * as Elements from "../const/allElements";
 import GradientBack from '../components/linegradient/linegradent';
 
 export default function UsersScreen({ navigation }: RootTabScreenProps<'UsersScreen'>) {
@@ -10,7 +10,7 @@ export default function UsersScreen({ navigation }: RootTabScreenProps<'UsersScr
     <View style={containerStyles.container}>
       <GradientBack/>
       <ScrollView showsHorizontalScrollIndicator={false}>
-        <User/>
+        <Elements.User/>
       </ScrollView>
     </View>
   )
