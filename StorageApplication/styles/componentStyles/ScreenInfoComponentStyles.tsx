@@ -16,12 +16,8 @@ const screenInfoTextStyles = StyleSheet.create({
     marginHorizontal: 20,
     alignItems: 'center',
   },
-  helpLink: {
-    paddingVertical: 15,
-  },
-  helpLinkText: {
-    textAlign: 'center',
-  },
+  helpLink: {paddingVertical: 15},
+  helpLinkText: {textAlign: 'center'},
   div:{
     width:Dimensions.get('window').width - 40,
     borderRadius:10,

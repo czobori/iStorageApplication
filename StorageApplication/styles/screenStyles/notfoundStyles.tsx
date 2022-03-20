@@ -1,4 +1,5 @@
 import { StyleSheet} from 'react-native';
+import * as Colors from "../../const/colors";
 const notFoundPageStyles = StyleSheet.create({
   title: {
     fontSize: 20,
@@ -10,7 +11,7 @@ const notFoundPageStyles = StyleSheet.create({
   },
   linkText: {
     fontSize: 14,
-    color: '#2e78b7',
+    color: Colors.darkerblue,
   },
 });
 export {notFoundPageStyles};

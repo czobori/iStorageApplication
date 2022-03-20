@@ -1,9 +1,9 @@
 import { StyleSheet,Dimensions} from 'react-native';
-
+import * as Colors from "../../const/colors";
 const storagePageStyles = StyleSheet.create({
   button:{
     borderWidth:2,
-    borderColor:"#1e2833",
+    borderColor:Colors.topnavbar,
     marginHorizontal:10,
     marginTop:15,
     padding:10,
@@ -12,15 +12,15 @@ const storagePageStyles = StyleSheet.create({
   },
   text:{
     fontSize:10,
-    color:"#1e2833",
+    color:Colors.topnavbar,
     fontWeight:"bold",
   },
   icon:{
     fontSize:50,
-    color:"#1e2833"
+    color:Colors.topnavbar
   },
   title:{
-    color:"#000",
+    color:Colors.black,
     fontWeight:"bold",
     fontSize:26
   }

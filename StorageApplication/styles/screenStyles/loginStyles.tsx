@@ -1,15 +1,15 @@
 import { StyleSheet,Dimensions} from 'react-native';
-
+import * as Colors from "../../const/colors";
 const loginPageStyles = StyleSheet.create({
   button: {
-    backgroundColor: "#003247",
+    backgroundColor: Colors.sidebar,
     padding:10,
     margin:10,
     borderRadius:10,
     borderWidth: 1,
-    borderColor:'#fff'
+    borderColor:Colors.white
   },
-  buttonText: {fontSize: 20,},
+  buttonText: {fontSize: 20},
   text: {
     fontSize:15,
     marginTop:10,
@@ -23,10 +23,10 @@ const loginPageStyles = StyleSheet.create({
     width:Dimensions.get('window').width - 100,
     maxWidth:350,
     textAlign: 'center',
-    borderColor:'#FDFEFE',
+    borderColor:Colors.inputborder,
     borderRadius:15,
-    backgroundColor: '#003247',
-    color:'#fff'
+    backgroundColor: Colors.sidebar,
+    color:Colors.white
   },
   istorage:{
     fontSize:34,
@@ -34,9 +34,9 @@ const loginPageStyles = StyleSheet.create({
     fontFamily:"Cochin-Italic",
     textAlign:"center"
   },
-  feher:{color:'#fff'},
+  feher:{color:Colors.white},
   errortext:{
-    color:'#FF1000',
+    color:Colors.errorred,
     alignSelf:"stretch",
     textAlign:"center",
     fontSize:12,

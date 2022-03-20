@@ -1,18 +1,19 @@
 import { StyleSheet,Dimensions} from 'react-native';
+import * as Colors from "../../const/colors";
 const deliveryCompStyles = StyleSheet.create({
   text:{
     fontSize:18,
-    color:'#fff',
+    color:Colors.white,
     textAlign:'center',
     paddingHorizontal:10
   },
   icons:{
     fontSize:35,
-    color:'#fff',
+    color:Colors.white,
     textAlign:"center"
   },
   div:{
-    backgroundColor:"#506479",
+    backgroundColor:Colors.grayblue,
     borderRadius:15,
     width:Dimensions.get('window').width - 40,
     paddingBottom:10,
@@ -22,7 +23,7 @@ const deliveryCompStyles = StyleSheet.create({
   info:{
     textAlign:'center',
     fontSize:12,
-    color:"#fff"
+    color:Colors.white
 },
 });
 export {deliveryCompStyles};

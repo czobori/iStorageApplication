@@ -1,18 +1,19 @@
 import { StyleSheet} from 'react-native';
+import * as Colors from "../../const/colors";
 const userComponentStyles = StyleSheet.create({
   div:{
-    backgroundColor: '#000',
+    backgroundColor: Colors.black,
     padding:10,
     margin:10,
     borderRadius:15,
     paddingRight:20,
   },
   text:{
-    color:'#fff',
+    color:Colors.white,
     paddingLeft:15,
   },
   names:{
-    color:'#fff',
+    color:Colors.white,
     fontWeight: "bold",
     textAlign:"center",
     paddingBottom:5,
@@ -20,12 +21,12 @@ const userComponentStyles = StyleSheet.create({
   },
   icons:{
     fontSize:12,
-    color:'#fff',
+    color:Colors.white,
   },
   info:{
     textAlign:'center',
     fontSize:12,
-    color:"#fff"
+    color:Colors.white
   },
 });
 export {userComponentStyles};

@@ -1,14 +1,14 @@
 import { StyleSheet,Dimensions} from 'react-native';
-
+import * as Colors from "../../const/colors";
 const logoutPageStyles = StyleSheet.create({
   button: {
-    backgroundColor: "#003247",
+    backgroundColor: Colors.sidebar,
     padding:10,
     margin:10,
     marginTop:0,
     borderRadius:10,
     borderWidth: 1,
-    borderColor:'#fff'
+    borderColor:Colors.white
   },
   text: {
     fontSize:16,
@@ -18,7 +18,7 @@ const logoutPageStyles = StyleSheet.create({
     fontWeight:"bold"
   },
   white:{
-    color:'#fff',
+    color:Colors.white,
     fontSize:16
   },
 });

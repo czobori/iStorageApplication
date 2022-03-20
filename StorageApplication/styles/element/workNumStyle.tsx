@@ -1,7 +1,8 @@
 import { StyleSheet,Dimensions } from "react-native";
+import * as Colors from "../../const/colors";
 const workersCountStyle = StyleSheet.create({
     div:{
-        backgroundColor:'#013F5A',
+        backgroundColor:Colors.darkersidebar,
         borderRadius:15,
         width:Dimensions.get('window').width - 40,
         paddingBottom:10,
@@ -11,18 +12,18 @@ const workersCountStyle = StyleSheet.create({
     },
     text:{
         fontSize:18,
-        color:'#fff',
+        color:Colors.white,
         textAlign:'center'
     },
     textinfo:{
         fontSize:12,
-        color:'#fff',
+        color:Colors.white,
         textAlign:'center',
         paddingHorizontal:10
     },
     icons:{
         fontSize:28,
-        color:'#fff',
+        color:Colors.white,
         textAlign:"center",
         paddingBottom:10
     },

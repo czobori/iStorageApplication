@@ -1,7 +1,8 @@
 import { StyleSheet,Dimensions} from 'react-native';
+import * as Colors from "../../const/colors";
 const workersNStyle = StyleSheet.create({
     div:{
-        backgroundColor:"#fff",
+        backgroundColor:Colors.white,
         borderRadius:15,
         width:Dimensions.get('window').width - 40,
         paddingBottom:10,
@@ -9,7 +10,7 @@ const workersNStyle = StyleSheet.create({
         marginTop:15,
         marginBottom:15,
         textAlign:"center",
-        color:"#1e2833"
+        color:Colors.topnavbar
     },
 });
 export {workersNStyle};

@@ -1,7 +1,8 @@
 import { StyleSheet} from 'react-native';
+import * as Colors from "../../const/colors";
 const backButtonStyles = StyleSheet.create({
     icon:{
-        color:"#fff",
+        color:Colors.white,
         fontSize:24,
         textAlign:"left",
         paddingRight:10,
