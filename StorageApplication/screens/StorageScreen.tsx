@@ -1,10 +1,11 @@
 import React from 'react';
 import {RootTabScreenProps} from '../types';
-import {containerStyles} from '../styles/element/containerStyle';
 import {Text,View} from 'react-native';
+import {containerStyles} from '../styles/element/containerStyle';
 import {storagePageStyles} from '../styles/screenStyles/storageStyle';
 import GradientBack from '../components/linegradient/linegradent';
 import * as Components from '../const/allComponents';
+
 export default function UsersScreen({ navigation }: RootTabScreenProps<'UsersScreen'>) {
     const onArrive = () =>{navigation.navigate("OrderInScreen");}
     const onInstore = () =>{navigation.navigate("PhoneHereScreen");}

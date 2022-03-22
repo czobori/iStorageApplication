@@ -4,6 +4,7 @@ import {containerStyles} from '../styles/element/containerStyle';
 import React from 'react';
 import GradientBack from '../components/linegradient/linegradent';
 import * as Components from "../const/allComponents";
+
 export default function LogoutScreen({ navigation }: RootTabScreenProps<'LogoutScreen'>) {
   const onLogoutPressed = () =>{navigation.navigate("LoginScreen");}
   return (

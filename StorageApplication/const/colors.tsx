@@ -10,5 +10,5 @@ const extralightblue = "#e7f2fd";
 const errorred = "#ff1000";
 const darkerblue = "#2e78b7";
 const inputborder = "#fdfefe"
-
-export {topnavbar,sidebar,backcolor,lightblue,white,black,grayblue,extralightblue,errorred,darkerblue,darkersidebar,inputborder};
+const placeholder = "#f4f6f7";
+export {topnavbar,sidebar,backcolor,lightblue,white,black,grayblue,extralightblue,errorred,darkerblue,darkersidebar,inputborder,placeholder};
