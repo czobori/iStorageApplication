@@ -5,7 +5,6 @@ import { progressCartConfig } from '../const/ChartKitConfig';
 import { homePageStyles } from '../styles/screenStyles/homeStyle';
 import BrandInfoText from '../components/texts/BrandProgressInfoTextCom';
 import { url } from '../const/url';
-
 export default class ChartBrand extends Component {
   state ={
     data:[],
@@ -25,7 +24,6 @@ export default class ChartBrand extends Component {
     const brandNames = () => {return arr.map(x => x.brand_name);}
     const berendeltDbs = () => {return arr.map(x => x.berendeltDb/this.state.osszes);}
     const data = {labels: brandNames(),data: berendeltDbs(),};
-
     return (
       <View style={homePageStyles.div}>
         <BrandInfoText/>
@@ -36,7 +34,3 @@ export default class ChartBrand extends Component {
     )
   }
 }
-
-
-
-
