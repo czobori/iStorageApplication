@@ -11,7 +11,7 @@ import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../typ
 import LinkingConfiguration from './LinkingConfiguration';
 import { FontAwesome5,MaterialCommunityIcons,Entypo,Fontisto,MaterialIcons} from '@expo/vector-icons';
 import { Text } from '../components/Themed';
-
+import * as myColors from "../const/colors";
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
     <NavigationContainer linking={LinkingConfiguration} theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
@@ -38,7 +38,6 @@ const BottomTab = createBottomTabNavigator<RootTabParamList>();
 
 function BottomTabNavigator() {
   const colorScheme = useColorScheme();
-
   return (
     <BottomTab.Navigator
       initialRouteName="LoginScreen"
@@ -49,12 +48,12 @@ function BottomTabNavigator() {
           title: 'Bejelentkezés',
           tabBarStyle: { display: "none" },
           tabBarButton: () => null,
-          tabBarIcon: ({ }) => <Entypo name="login" size={24} color="#1e2833" />,
+          tabBarIcon: ({ }) => <Entypo name="login" size={24} color={myColors.topnavbar} />,
           headerRight: () => (
             <Pressable
               onPress={() => navigation.navigate('Info')}
               style={({ pressed }) => ({ opacity: pressed ? 0.5 : 1,})}>
-              <FontAwesome name="info-circle" size={25} color="#1e2833" style={{ marginRight: 15 }} />
+              <FontAwesome name="info-circle" size={25} color={myColors.topnavbar} style={{ marginRight: 15 }} />
             </Pressable>
           ),
         })}
@@ -63,7 +62,7 @@ function BottomTabNavigator() {
         name="HomeScreen" component={Screens.HomeScreen}
         options={({ navigation }: RootTabScreenProps<'HomeScreen'>) => ({
           title: 'Statisztikák',
-          tabBarIcon: ({ color }) => <MaterialIcons name="storage" size={27} color="#1e2833" />,
+          tabBarIcon: ({ color }) => <MaterialIcons name="storage" size={27} color={myColors.topnavbar} />,
         })}
       />
       <BottomTab.Screen
@@ -71,14 +70,14 @@ function BottomTabNavigator() {
         options={({ navigation }: RootTabScreenProps<'OrderInScreen'>) => ({
           tabBarButton: () => null,
           title: 'Beérkező',
-          tabBarIcon: ({ color }) => <Fontisto name="truck" size={24} color="#1e2833" />,
+          tabBarIcon: ({ color }) => <Fontisto name="truck" size={24} color={myColors.topnavbar} />,
         })}
       />
       <BottomTab.Screen
         name="StorageScreen" component={Screens.StorageScreen}
         options={({ navigation }: RootTabScreenProps<'StorageScreen'>) => ({
           title: 'Raktár',
-          tabBarIcon: ({ color }) => <FontAwesome name="inbox" size={26} color="#1e2833" />,
+          tabBarIcon: ({ color }) => <FontAwesome name="inbox" size={26} color={myColors.topnavbar} />,
         })}
       />
       <BottomTab.Screen
@@ -86,7 +85,7 @@ function BottomTabNavigator() {
         options={({ navigation }: RootTabScreenProps<'PhoneHereScreen'>) => ({
           tabBarButton: () => null,
           title: 'Raktáron',
-          tabBarIcon: ({ color }) => <FontAwesome name="inbox" size={26} color="#1e2833" />,
+          tabBarIcon: ({ color }) => <FontAwesome name="inbox" size={26} color={myColors.topnavbar} />,
         })}
       />
       <BottomTab.Screen
@@ -94,21 +93,21 @@ function BottomTabNavigator() {
         options={({ navigation }: RootTabScreenProps<'OrderOutScreen'>) => ({
           tabBarButton: () => null,
           title: 'Kimenő',
-          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="truck-check-outline" size={29} color="#1e2833" />,
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="truck-check-outline" size={29} color={myColors.topnavbar} />,
         })}
       />
       <BottomTab.Screen
         name="UsersScreen" component={Screens.UsersScreen}
         options={({ navigation }: RootTabScreenProps<'UsersScreen'>) => ({
           title: 'Raktárosok',
-          tabBarIcon: ({ color }) => <FontAwesome5 name="users" size={24} color="#1e2833" />,
+          tabBarIcon: ({ color }) => <FontAwesome5 name="users" size={24} color={myColors.topnavbar} />,
         })}
       />
       <BottomTab.Screen
         name="LogoutScreen" component={Screens.LogoutScreen}
         options={({ navigation }: RootTabScreenProps<'LogoutScreen'>) => ({
           title: 'Kijelentkezés',
-          tabBarIcon: ({ color }) => <Entypo name="log-out" size={24} color="#1e2833" />,
+          tabBarIcon: ({ color }) => <Entypo name="log-out" size={24} color={myColors.topnavbar} />,
         })}
       />
     </BottomTab.Navigator>
