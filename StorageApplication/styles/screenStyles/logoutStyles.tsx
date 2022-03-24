@@ -1,4 +1,4 @@
-import { StyleSheet,Dimensions} from 'react-native';
+import { StyleSheet} from 'react-native';
 import * as Colors from "../../const/colors";
 const logoutPageStyles = StyleSheet.create({
   button: {

@@ -24,8 +24,8 @@ export default function LoginScreen({ navigation }: RootTabScreenProps<'LoginScr
     }
     fetch(url+'/Login',option)
       .then(res=>res.json())
-      .then(res=>{res.message =="auth_success" ? navigation.navigate("HomeScreen") : console.log("not match");})
-    reset({username:"",password:""});
+      .then(res=>{res.message =="auth_success" ? navigation.navigate("HomeScreen"): console.log("not match");})
+    setTimeout(() => reset({username:"",password:""}), 300);
   };
   
   return (
