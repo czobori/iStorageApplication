@@ -24,11 +24,12 @@ export default class ChartBrand extends Component {
     const brandNames = () => {return arr.map(x => x.brand_name);}
     const berendeltDbs = () => {return arr.map(x => x.berendeltDb/this.state.osszes);}
     const data = {labels: brandNames(),data: berendeltDbs(),};
+    console.log(data);
     return (
       <View style={homePageStyles.div}>
         <BrandInfoText/>
         <ProgressChart data={data}
-          width={Dimensions.get('window').width-70 } height={180} 
+          width={Dimensions.get('window').width-70 } height={220} 
           chartConfig={progressCartConfig} style={{borderRadius: 16}} strokeWidth= {11}/>
       </View>
     )
