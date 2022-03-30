@@ -24,7 +24,6 @@ export default class ChartBrand extends Component {
     const brandNames = () => {return arr.map(x => x.brand_name);}
     const berendeltDbs = () => {return arr.map(x => x.berendeltDb/this.state.osszes);}
     const data = {labels: brandNames(),data: berendeltDbs(),};
-    console.log(data);
     return (
       <View style={homePageStyles.div}>
         <BrandInfoText/>

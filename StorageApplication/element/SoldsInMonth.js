@@ -15,11 +15,14 @@ export default class SoldsThisMonth extends Component {
     const solds = await response.json();
     this.setState({data: solds});
     this.setState({yearMonth: solds[0].date});
+    console.log(solds);
   }
-  componentDidMount(){this.fetchData();}
- 
+  componentDidMount(){
+    console.log("anyád");
+    this.fetchData();}
+
   render() {
-    Moment.locale('hu');
+    
     return (
       <View>
         <SoldInMonthText/>

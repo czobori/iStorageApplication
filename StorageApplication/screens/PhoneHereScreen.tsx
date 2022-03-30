@@ -15,6 +15,7 @@ export default function PhoneHereScreen({ navigation }: RootTabScreenProps<'Phon
           <Components.BackButton onPress={onBackPressed}/>
           <Components.PhoneHereText/>
           <Elements.Phones/>
+          
         </ScrollView>
     </View>
   )
