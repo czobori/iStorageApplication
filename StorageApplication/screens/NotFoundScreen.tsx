@@ -9,9 +9,9 @@ export default function NotFoundScreen({ navigation }: RootStackScreenProps<'Not
   return (
     <View style={containerStyles.container}>
       <GradientBack/>
-      <Text style={notFoundPageStyles.title}>This screen doesn't exist.</Text>
+      <Text style={notFoundPageStyles.title}>Az keresett oldal nem található.</Text>
       <TouchableOpacity onPress={() => navigation.replace('Root')} style={notFoundPageStyles.link}>
-        <Text style={notFoundPageStyles.linkText}>Go to home screen!</Text>
+        <Text style={notFoundPageStyles.linkText}>Ide kattintva visszajut a bejelentkezési felületre!</Text>
       </TouchableOpacity>
     </View>
   );
