@@ -1,0 +1,1 @@
+{"ast":null,"code":"export var url = \"https://istorage.irct.xyz\";","map":{"version":3,"sources":["C:/szakdolgozat/uj/StorageApplication/const/url.tsx"],"names":["url"],"mappings":"AAAA,OAAO,IAAMA,GAAG,GAAC,2BAAV","sourcesContent":["export const url=\"https://istorage.irct.xyz\";\r\n//export const url=\"http://localhost:4550\";"]},"metadata":{},"sourceType":"module"}

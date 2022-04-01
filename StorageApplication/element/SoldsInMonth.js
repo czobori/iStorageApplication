@@ -6,23 +6,15 @@ import SoldInMonthText from '../components/texts/SoldInMonthTextComp';
 import { url } from '../const/url';
 
 export default class SoldsThisMonth extends Component {
-  state ={
-    data:[],
-    yearMonth:""
-  }
+  state ={data:[]}
   fetchData= async()=>{
     const response = await fetch(url+'/sold');
     const solds = await response.json();
     this.setState({data: solds});
-    this.setState({yearMonth: solds[0].date});
-    console.log(solds);
   }
-  componentDidMount(){
-    console.log("anyád");
-    this.fetchData();}
+  componentDidMount(){this.fetchData();}
 
   render() {
-    
     return (
       <View>
         <SoldInMonthText/>

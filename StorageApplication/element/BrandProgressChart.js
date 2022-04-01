@@ -28,8 +28,8 @@ export default class ChartBrand extends Component {
       <View style={homePageStyles.div}>
         <BrandInfoText/>
         <ProgressChart data={data}
-          width={Dimensions.get('window').width-70 } height={220} 
-          chartConfig={progressCartConfig} style={{borderRadius: 16}} strokeWidth= {11}/>
+          width={Dimensions.get('window').width-70 } height={180} 
+          chartConfig={progressCartConfig} style={{borderRadius: 16}} strokeWidth= {10}/>
       </View>
     )
   }
