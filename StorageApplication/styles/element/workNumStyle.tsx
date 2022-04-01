@@ -5,19 +5,13 @@ const workersCountStyle = StyleSheet.create({
         backgroundColor:Colors.darkersidebar,
         borderRadius:15,
         width:Dimensions.get('window').width - 40,
-        paddingBottom:10,
-        paddingTop:10,
+        paddingBottom:10,paddingTop:10,
         marginTop:15,
         textAlign:'center'
     },
-    text:{
-        fontSize:18,
-        color:Colors.white,
-        textAlign:'center'
-    },
+    text:{fontSize:18,color:Colors.white,textAlign:'center'},
     textinfo:{
-        fontSize:12,
-        color:Colors.white,
+        fontSize:12,color:Colors.white,
         textAlign:'center',
         paddingHorizontal:10
     },

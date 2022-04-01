@@ -5,8 +5,7 @@ const backButtonStyles = StyleSheet.create({
         color:Colors.white,
         fontSize:24,
         textAlign:"left",
-        paddingRight:10,
-        paddingTop:5
+        paddingRight:10,paddingTop:5
     },
 });
 export {backButtonStyles};

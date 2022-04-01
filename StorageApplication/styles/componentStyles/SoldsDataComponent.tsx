@@ -3,12 +3,9 @@ import * as Colors from '../../const/colors';
 const soldsComponentStyles = StyleSheet.create({
   div:{
     backgroundColor:Colors.backcolor,
-    paddingHorizontal:10,
-    paddingVertical:2,
-    marginHorizontal:5,
-    marginVertical:5,
-    borderRadius:15,
-    borderWidth:2,
+    paddingHorizontal:10, paddingVertical:2,
+    marginHorizontal:5,marginVertical:5,
+    borderRadius:15,borderWidth:2,
     borderBottomColor:Colors.sidebar
   },
   phonedata:{fontWeight: "bold"},

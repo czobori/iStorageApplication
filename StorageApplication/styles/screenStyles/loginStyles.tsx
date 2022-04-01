@@ -10,37 +10,25 @@ const loginPageStyles = StyleSheet.create({
     borderColor:Colors.white
   },
   buttonText: {fontSize: 20},
-  text: {
-    fontSize:15,
-    marginTop:10,
-    marginBottom:10,
-  },
+  text: {fontSize:15,marginTop:10,marginBottom:10,},
   input: {
     height: 40,
-    margin:5,
-    borderWidth:1,
-    padding:5,
-    width:Dimensions.get('window').width - 100,
-    maxWidth:350,
+    margin:5,padding:5,
+    width:Dimensions.get('window').width - 100,maxWidth:350,
     textAlign: 'center',
-    borderColor:Colors.inputborder,
-    borderRadius:15,
-    backgroundColor: Colors.sidebar,
-    color:Colors.white
+    borderWidth:1,borderColor:Colors.inputborder,borderRadius:15,
+    backgroundColor: Colors.sidebar,color:Colors.white
   },
   istorage:{
-    fontSize:34,
+    fontSize:34,fontFamily:"Cochin-Italic",
     marginBottom:15,
-    fontFamily:"Cochin-Italic",
     textAlign:"center"
   },
   feher:{color:Colors.white},
   errortext:{
     color:Colors.errorred,
-    alignSelf:"stretch",
-    textAlign:"center",
-    fontSize:12,
-    fontWeight:"bold"
+    alignSelf:"stretch",textAlign:"center",
+    fontSize:12,fontWeight:"bold"
   }
 });
 export {loginPageStyles};
